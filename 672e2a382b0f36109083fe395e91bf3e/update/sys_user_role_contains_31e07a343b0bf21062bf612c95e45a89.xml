@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_user_role_contains">
+    <sys_user_role_contains action="INSERT_OR_UPDATE">
+        <contains display_value="x_snc_agenticbpc.consultant" name="x_snc_agenticbpc.consultant">d0a0b2fc2b0f36109083fe395e91bf39</contains>
+        <role display_value="x_snc_agenticbpc.admin" name="x_snc_agenticbpc.admin">5a30f2bc2b0f36109083fe395e91bfb4</role>
+        <sys_class_name>sys_user_role_contains</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-02-11 16:57:51</sys_created_on>
+        <sys_id>31e07a343b0bf21062bf612c95e45a89</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_snc_agenticbpc.consultant.x_snc_agenticbpc.admin</sys_name>
+        <sys_package display_value="AgenticBusinessProcessConsultant WORK IN PROGRESS" source="x_snc_agenticbpc">672e2a382b0f36109083fe395e91bf3e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AgenticBusinessProcessConsultant WORK IN PROGRESS">672e2a382b0f36109083fe395e91bf3e</sys_scope>
+        <sys_update_name>sys_user_role_contains_31e07a343b0bf21062bf612c95e45a89</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-02-11 16:57:51</sys_updated_on>
+    </sys_user_role_contains>
+</record_update>

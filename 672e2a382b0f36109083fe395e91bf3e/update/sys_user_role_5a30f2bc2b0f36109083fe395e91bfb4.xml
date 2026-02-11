@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_user_role">
+    <sys_user_role action="INSERT_OR_UPDATE">
+        <assignable_by/>
+        <can_delegate>true</can_delegate>
+        <description>Users with the x_snc_agenticbpc.admin role have full access to all "Business Processes". </description>
+        <elevated_privilege>false</elevated_privilege>
+        <federated_id>IOHXF/XM/VUqbW7DBuRD4l6tpX/tOmCVqxAgpmnkLeo=</federated_id>
+        <grantable>true</grantable>
+        <includes_roles/>
+        <name>x_snc_agenticbpc.admin</name>
+        <scoped_admin>false</scoped_admin>
+        <suffix>admin</suffix>
+        <sys_class_name>sys_user_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-02-11 16:55:29</sys_created_on>
+        <sys_id>5a30f2bc2b0f36109083fe395e91bfb4</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>x_snc_agenticbpc.admin</sys_name>
+        <sys_package display_value="AgenticBusinessProcessConsultant WORK IN PROGRESS" source="x_snc_agenticbpc">672e2a382b0f36109083fe395e91bf3e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AgenticBusinessProcessConsultant WORK IN PROGRESS">672e2a382b0f36109083fe395e91bf3e</sys_scope>
+        <sys_update_name>sys_user_role_5a30f2bc2b0f36109083fe395e91bfb4</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-02-11 16:55:39</sys_updated_on>
+    </sys_user_role>
+</record_update>
