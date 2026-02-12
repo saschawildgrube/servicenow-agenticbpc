@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module">
     <sys_app_module action="INSERT_OR_UPDATE">
         <active>true</active>
-        <application display_value="AgenticBusinessProcessConsultant">97cf6e3c2b0f36109083fe395e91bf17</application>
+        <application display_value="Agentic BPC">97cf6e3c2b0f36109083fe395e91bf17</application>
         <assessment/>
         <device_type/>
         <filter table="syslog_app_scope">sys_created_onONLast 30 minutes@javascript:gs.beginningOfLast30Minutes()@javascript:gs.endOfLast30Minutes()^sys_scope=672e2a382b0f36109083fe395e91bf3e<item endquery="false" field="sys_created_on" goto="false" newquery="false" operator="ON" or="false" value="Last 30 minutes@javascript:gs.beginningOfLast30Minutes()@javascript:gs.endOfLast30Minutes()"/>
