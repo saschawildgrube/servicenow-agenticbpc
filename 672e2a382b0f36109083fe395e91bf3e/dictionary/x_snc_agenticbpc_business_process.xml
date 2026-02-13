@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="a380fc612b437e109083fe395e91bfa6" label="Business Process" max_length="40" name="x_snc_agenticbpc_business_process" type="collection"/>
+</database>
