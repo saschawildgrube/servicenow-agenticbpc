@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_aia_tool">
+    <sn_aia_tool action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <description>Update the details of an existing business process, which is identified by its name or Sys Id.</description>
+        <input_schema>[]</input_schema>
+        <name>Update Business Process</name>
+        <record_type>custom</record_type>
+        <script><![CDATA[(function(inputs) {
+// only string inputs are allowed 
+// return outputs object where the keys in it are understandable by LLM
+})(inputs);]]></script>
+        <sys_class_name>sn_aia_tool</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-02-13 15:04:50</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>f93a20e12b037e109083fe395e91bf79</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Update Business Process</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="AgenticBusinessProcessConsultant WORK IN PROGRESS" source="x_snc_agenticbpc">672e2a382b0f36109083fe395e91bf3e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AgenticBusinessProcessConsultant WORK IN PROGRESS">672e2a382b0f36109083fe395e91bf3e</sys_scope>
+        <sys_update_name>sn_aia_tool_f93a20e12b037e109083fe395e91bf79</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-02-13 15:04:50</sys_updated_on>
+        <target_document/>
+        <target_document_table>sn_aia_tool</target_document_table>
+        <type>script</type>
+    </sn_aia_tool>
+</record_update>

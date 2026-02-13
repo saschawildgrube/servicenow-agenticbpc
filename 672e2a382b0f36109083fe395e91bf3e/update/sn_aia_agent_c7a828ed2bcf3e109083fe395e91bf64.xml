@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_aia_agent">
+    <sn_aia_agent action="INSERT_OR_UPDATE">
+        <agent_type>internal</agent_type>
+        <applicability_script><![CDATA[/** 
+ * Function to process inputs related to ServiceNow change request operations 
+ * 
+ * @param {Object} inputs - The input parameters object 
+ * @param {string} inputs.objective - The purpose or goal of the operation 
+ * @param {string} inputs.execution_plan_id - Unique identifier for the execution plan 
+ * @param {Object} inputs.context - Context information about the ServiceNow change request 
+ * @param {string} inputs.context.url - The URL of the change request in Service Operations Workspace 
+ * @param {string} inputs.context.table - The ServiceNow table name (e.g., 'change_request') 
+ * @param {string} inputs.context.record_sys_id - The sys ID of the record 
+ * @param {string} inputs.context.route - The route type (e.g., 'record') 
+ * @param {string} inputs.context.additional_context - Additional contextual information in JSON format 
+ * @param {string} inputs.context.experience - The UI experience name (e.g., 'Service Operations Workspace') 
+ * @param {string} inputs.context.number - The request number 
+ * @param {string} inputs.context.portal - The portal ID 
+ * @param {string} inputs.context.device_type - The device type from which the experience is accessed, e.g.'mweb' 
+ * @param {string} inputs.context.deployment_id - The unique identifier for the assistant deployment 
+ * @param {string} inputs.context.assistant_type - The type of assistant, e.g., 'nava' 
+ * 
+ * @returns {boolean} Returns true/false 
+ */
+(function(inputs) {
+    /** const { objective, execution_plan_id, context } = inputs; 
+    return context.table == 'incident' ; */
+    return false;
+})(inputs);]]></applicability_script>
+        <compiled_handbook/>
+        <description>Interview the user - a stakeholder of a business process - to gather insights on the given business process and to document the details of the business process.</description>
+        <external_agent_configuration/>
+        <instructions/>
+        <internal_name>global.x_snc_agenticbpc.Agentic Business Process Consultant</internal_name>
+        <name>Agentic Business Process Consultant</name>
+        <parent/>
+        <processing_message/>
+        <proficiency>- Possesses deep expertise in business process analysis and documentation, enabling the agent to gather comprehensive insights on existing or new business processes and produce detailed, structured business process documentation. This includes understanding process flows, identifying key stakeholders, and ensuring that documentation is accurate, actionable, and tailored to organizational needs.
+- Can efficiently retrieve and access the details of any existing business process using its name or Sys Id, ensuring that the agent has up-to-date and accurate information for analysis, review, and documentation purposes. This capability supports the agent's consulting activities by providing foundational data for process evaluation.
+- Has the ability to update and refine the details of existing business processes, identified by their name or Sys Id, to reflect new insights, improvements, or organizational changes. This capability ensures that business process documentation remains current and relevant, supporting continuous process optimization.
+- Can conduct iterative business process improvement cycles by retrieving existing process details, analyzing them, and updating documentation as needed. This integrated capability allows the agent to support ongoing process optimization and maintain high-quality, up-to-date business process records.</proficiency>
+        <record_type>custom</record_type>
+        <role>You are an expert business process consultant. Your job is to gather insights on existing or new business processes and produce details business process documentation.</role>
+        <source_id/>
+        <strategy display_value="ReAct">f0bff21f9f13c6108f431597d90a1c74</strategy>
+        <sys_class_name>sn_aia_agent</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-02-13 15:02:35</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>c7a828ed2bcf3e109083fe395e91bf64</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Agentic Business Process Consultant</sys_name>
+        <sys_package display_value="AgenticBusinessProcessConsultant WORK IN PROGRESS" source="x_snc_agenticbpc">672e2a382b0f36109083fe395e91bf3e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AgenticBusinessProcessConsultant WORK IN PROGRESS">672e2a382b0f36109083fe395e91bf3e</sys_scope>
+        <sys_update_name>sn_aia_agent_c7a828ed2bcf3e109083fe395e91bf64</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-02-13 15:04:59</sys_updated_on>
+    </sn_aia_agent>
+</record_update>
