@@ -2,7 +2,7 @@
     <sys_dictionary action="INSERT_OR_UPDATE" element="json" table="x_snc_agenticbpc_business_process">
         <active>true</active>
         <array>false</array>
-        <attributes/>
+        <attributes>json_view=true</attributes>
         <audit>false</audit>
         <calculation><![CDATA[(function calculatedFieldValue(current) {
 
@@ -13,7 +13,7 @@
         <choice/>
         <choice_field/>
         <choice_table/>
-        <column_label>json</column_label>
+        <column_label>Json</column_label>
         <comments/>
         <create_roles/>
         <default_value/>
@@ -52,13 +52,13 @@
         <sys_class_name>sys_dictionary</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2026-02-13 15:42:47</sys_created_on>
-        <sys_name>json</sys_name>
+        <sys_name>Json</sys_name>
         <sys_package display_value="AgenticBusinessProcessConsultant WORK IN PROGRESS" source="x_snc_agenticbpc">672e2a382b0f36109083fe395e91bf3e</sys_package>
         <sys_policy/>
         <sys_scope display_value="AgenticBusinessProcessConsultant WORK IN PROGRESS">672e2a382b0f36109083fe395e91bf3e</sys_scope>
         <sys_update_name>sys_dictionary_x_snc_agenticbpc_business_process_json</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-02-13 15:42:47</sys_updated_on>
+        <sys_updated_on>2026-02-16 14:44:00</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
