@@ -16,9 +16,6 @@
 	var StartAgenticConversation = x_snc_devtools.StartAgenticConversation;
 	var IsValidSysId = x_snc_devtools.IsValidSysId;
 
-
-	Debug('StartInterview');
-
 	var grBusinessProcess = GetBusinessProcessRecord(vBusinessProcess);
 	if (IsValidRecord(grBusinessProcess) == false)
 	{
@@ -35,7 +32,7 @@
 
 	var strConversationSysId = StartAgenticConversation(
 		'Business Process Analysis',
-		'Start interview with user about business process '+grBusinessProcess.sys_id,
+		'Start interview with user about business process '+grBusinessProcess.number,
 		grBusinessProcess,
 		grUser,
 		true);
@@ -52,14 +49,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2026-02-18 14:39:02</sys_created_on>
         <sys_id>5c3392cf2bcbf2109083fe395e91bf62</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name>StartInterview</sys_name>
         <sys_package display_value="AgenticBusinessProcessConsultant WORK IN PROGRESS" source="x_snc_agenticbpc">672e2a382b0f36109083fe395e91bf3e</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="AgenticBusinessProcessConsultant WORK IN PROGRESS">672e2a382b0f36109083fe395e91bf3e</sys_scope>
         <sys_update_name>sys_script_include_5c3392cf2bcbf2109083fe395e91bf62</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-02-18 15:14:27</sys_updated_on>
+        <sys_updated_on>2026-02-23 15:12:55</sys_updated_on>
         <x_snc_devtools_sys_ui_script/>
     </sys_script_include>
 </record_update>

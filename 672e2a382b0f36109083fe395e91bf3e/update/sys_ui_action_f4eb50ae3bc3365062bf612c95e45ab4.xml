@@ -6,7 +6,7 @@
         <client_script_v2><![CDATA[function onClick(g_form) {
 
 }]]></client_script_v2>
-        <comments/>
+        <comments>Starts the interview and shows the Now Assist Panel.</comments>
         <condition>IsActive() == true</condition>
         <form_action>true</form_action>
         <form_button>true</form_button>
@@ -75,7 +75,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>f4eb50ae3bc3365062bf612c95e45ab4</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name>Start Interview</sys_name>
         <sys_overrides/>
         <sys_package display_value="AgenticBusinessProcessConsultant WORK IN PROGRESS" source="x_snc_agenticbpc">672e2a382b0f36109083fe395e91bf3e</sys_package>
@@ -83,7 +83,7 @@
         <sys_scope display_value="AgenticBusinessProcessConsultant WORK IN PROGRESS">672e2a382b0f36109083fe395e91bf3e</sys_scope>
         <sys_update_name>sys_ui_action_f4eb50ae3bc3365062bf612c95e45ab4</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-02-18 16:50:48</sys_updated_on>
+        <sys_updated_on>2026-02-23 12:46:54</sys_updated_on>
         <table>x_snc_agenticbpc_business_process</table>
         <ui11_compatible>true</ui11_compatible>
         <ui16_compatible>false</ui16_compatible>
