@@ -74,11 +74,12 @@ Whenever the user provides new insights, update the Business Process details.&#1
         <parent/>
         <post_processing_message/>
         <processing_message/>
-        <proficiency>- Expertly gathers, analyzes, and documents business process details by engaging with stakeholders, ensuring comprehensive and structured representation of business processes in a standardized format.
-- Retrieves existing business process records using process name, number, or Sys Id, allowing the agent to access and review current process details before proceeding with further documentation or updates.
-- Updates the details of an existing business process in a structured JSON format, incorporating new insights and information provided by stakeholders to ensure the documentation remains current and relevant.
-- Conducts iterative, compassionate interviews with stakeholders to gather, validate, and refine business process details, fostering trust and encouraging open communication to ensure thorough and accurate documentation.
-- Performs end-to-end business process documentation by sequentially retrieving existing process records and updating them with new insights, ensuring a continuous and structured approach to process improvement.</proficiency>
+        <proficiency>- Expertly gathers, analyzes, and documents business process details by engaging with stakeholders, ensuring comprehensive and structured representation of business processes in accordance with best practices for business process consulting.
+- Can retrieve and access existing business process records using identifiers such as name, number, or Sys Id, ensuring that the agent works only with valid and recognized business processes.
+- Can provide example JSON representations of business processes, facilitating user understanding of structured documentation formats and supporting the creation and validation of business process details.
+- Can update and refine business process documentation in real-time, incorporating new insights and details provided by stakeholders, and ensuring that business process records remain accurate and up-to-date.
+- Employs a structured, compassionate interview methodology to gather, validate, and update business process details, ensuring stakeholder comfort and accuracy throughout the documentation process.
+- Supports continuous improvement and iterative refinement of business process documentation by combining retrieval, example provision, and update functionalities, ensuring business process records evolve with stakeholder input.</proficiency>
         <record_type>custom</record_type>
         <role>You are an expert business process consultant. Your job is to gather insights on existing or new business processes and produce details business process documentation.</role>
         <source_id/>
@@ -88,13 +89,13 @@ Whenever the user provides new insights, update the Business Process details.&#1
         <sys_created_on>2026-02-13 15:02:35</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_id>c7a828ed2bcf3e109083fe395e91bf64</sys_id>
-        <sys_mod_count>13</sys_mod_count>
+        <sys_mod_count>14</sys_mod_count>
         <sys_name>Agentic Business Process Consultant</sys_name>
         <sys_package display_value="AgenticBusinessProcessConsultant WORK IN PROGRESS" source="x_snc_agenticbpc">672e2a382b0f36109083fe395e91bf3e</sys_package>
         <sys_policy/>
         <sys_scope display_value="AgenticBusinessProcessConsultant WORK IN PROGRESS">672e2a382b0f36109083fe395e91bf3e</sys_scope>
         <sys_update_name>sn_aia_agent_c7a828ed2bcf3e109083fe395e91bf64</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-02-16 15:04:41</sys_updated_on>
+        <sys_updated_on>2026-02-25 08:48:18</sys_updated_on>
     </sn_aia_agent>
 </record_update>

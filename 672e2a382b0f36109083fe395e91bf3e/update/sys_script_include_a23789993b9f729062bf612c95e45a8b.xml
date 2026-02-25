@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_snc_agenticbpc.AiToolGetExampleBusinessProcess</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description>Returns an example JSON structure of a business process.</description>
+        <mobile_callable>false</mobile_callable>
+        <name>AiToolGetExampleBusinessProcess</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[function AiToolGetExampleBusinessProcess()
+{
+	var MakeJson = x_snc_devtools.MakeJson;
+	var BusinessProcessGetExample = x_snc_devtools.BusinessProcessGetExample;
+	
+	var businessprocess = BusinessProcessGetExample();
+	var strBusinessProcessExampleJson = MakeJson(businessprocess); 
+
+	return strBusinessProcessExampleJson;
+}]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-02-25 08:50:22</sys_created_on>
+        <sys_id>a23789993b9f729062bf612c95e45a8b</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>AiToolGetExampleBusinessProcess</sys_name>
+        <sys_package display_value="AgenticBusinessProcessConsultant WORK IN PROGRESS" source="x_snc_agenticbpc">672e2a382b0f36109083fe395e91bf3e</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="AgenticBusinessProcessConsultant WORK IN PROGRESS">672e2a382b0f36109083fe395e91bf3e</sys_scope>
+        <sys_update_name>sys_script_include_a23789993b9f729062bf612c95e45a8b</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-02-25 08:52:46</sys_updated_on>
+        <x_snc_devtools_sys_ui_script/>
+    </sys_script_include>
+</record_update>
