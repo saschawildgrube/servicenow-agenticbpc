@@ -4,13 +4,13 @@
             <element>.begin_split</element>
             <position>0</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-02-20 15:04:50</sys_created_on>
-            <sys_id>065d247f2bc3ba109083fe395e91bffe</sys_id>
+            <sys_created_on>2026-02-23 16:26:56</sys_created_on>
+            <sys_id>4aec18342b1b36509083fe395e91bf67</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_snc_agenticbpc_business_process" sys_domain="global" view="Default view">9358b8a52b837e109083fe395e91bf71</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-02-20 15:04:50</sys_updated_on>
+            <sys_updated_on>2026-02-23 16:26:56</sys_updated_on>
             <sys_user/>
             <type>.begin_split</type>
         </sys_ui_element>
@@ -18,13 +18,13 @@
             <element>number</element>
             <position>1</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-02-20 15:04:50</sys_created_on>
-            <sys_id>ce5d247f2bc3ba109083fe395e91bffe</sys_id>
+            <sys_created_on>2026-02-23 16:26:56</sys_created_on>
+            <sys_id>c6ec18342b1b36509083fe395e91bf68</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_snc_agenticbpc_business_process" sys_domain="global" view="Default view">9358b8a52b837e109083fe395e91bf71</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-02-20 15:04:50</sys_updated_on>
+            <sys_updated_on>2026-02-23 16:26:56</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -32,13 +32,13 @@
             <element>.split</element>
             <position>2</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-02-20 15:04:50</sys_created_on>
-            <sys_id>8a5d247f2bc3ba109083fe395e91bfff</sys_id>
+            <sys_created_on>2026-02-23 16:26:56</sys_created_on>
+            <sys_id>46ec18342b1b36509083fe395e91bf69</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_snc_agenticbpc_business_process" sys_domain="global" view="Default view">9358b8a52b837e109083fe395e91bf71</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-02-20 15:04:50</sys_updated_on>
+            <sys_updated_on>2026-02-23 16:26:56</sys_updated_on>
             <sys_user/>
             <type>.split</type>
         </sys_ui_element>
@@ -46,13 +46,13 @@
             <element>.end_split</element>
             <position>3</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-02-20 15:04:50</sys_created_on>
-            <sys_id>0e5d647f2bc3ba109083fe395e91bf0c</sys_id>
+            <sys_created_on>2026-02-23 16:26:56</sys_created_on>
+            <sys_id>c2ec18342b1b36509083fe395e91bf6a</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_snc_agenticbpc_business_process" sys_domain="global" view="Default view">9358b8a52b837e109083fe395e91bf71</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-02-20 15:04:50</sys_updated_on>
+            <sys_updated_on>2026-02-23 16:26:56</sys_updated_on>
             <sys_user/>
             <type>.end_split</type>
         </sys_ui_element>
@@ -60,13 +60,13 @@
             <element>name</element>
             <position>4</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-02-20 15:04:50</sys_created_on>
-            <sys_id>c65d647f2bc3ba109083fe395e91bf0d</sys_id>
+            <sys_created_on>2026-02-23 16:26:56</sys_created_on>
+            <sys_id>42ec18342b1b36509083fe395e91bf6b</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_snc_agenticbpc_business_process" sys_domain="global" view="Default view">9358b8a52b837e109083fe395e91bf71</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-02-20 15:04:50</sys_updated_on>
+            <sys_updated_on>2026-02-23 16:26:56</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -74,27 +74,27 @@
             <element>description</element>
             <position>5</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-02-20 15:04:50</sys_created_on>
-            <sys_id>825d647f2bc3ba109083fe395e91bf0e</sys_id>
+            <sys_created_on>2026-02-23 16:26:56</sys_created_on>
+            <sys_id>ceec18342b1b36509083fe395e91bf6b</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_snc_agenticbpc_business_process" sys_domain="global" view="Default view">9358b8a52b837e109083fe395e91bf71</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-02-20 15:04:50</sys_updated_on>
+            <sys_updated_on>2026-02-23 16:26:56</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>json</element>
+            <element>summary</element>
             <position>6</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-02-20 15:04:50</sys_created_on>
-            <sys_id>4e5d647f2bc3ba109083fe395e91bf0e</sys_id>
+            <sys_created_on>2026-02-23 16:26:56</sys_created_on>
+            <sys_id>4eec18342b1b36509083fe395e91bf6c</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_snc_agenticbpc_business_process" sys_domain="global" view="Default view">9358b8a52b837e109083fe395e91bf71</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-02-20 15:04:50</sys_updated_on>
+            <sys_updated_on>2026-02-23 16:26:56</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
