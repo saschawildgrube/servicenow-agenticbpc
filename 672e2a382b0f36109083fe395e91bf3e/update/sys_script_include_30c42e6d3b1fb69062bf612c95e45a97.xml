@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_snc_agenticbpc.HtmlRenderBusinessProcess</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description>Renders the given Business Process as an HTML document. </description>
+        <mobile_callable>false</mobile_callable>
+        <name>HtmlRenderBusinessProcess</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[function HtmlRenderBusinessProcess(vBusinessProcess)
+{
+	var IsValidRecord = x_snc_devtools.IsValidRecord;
+	var HtmlRenderError = x_snc_devtools.HtmlRenderError;
+	var HtmlRenderWarning = x_snc_devtools.HtmlRenderWarning;
+	var HtmlRenderTableOfContents = x_snc_devtools.HtmlRenderTableOfContents;
+	var ParseJson = x_snc_devtools.ParseJson;
+	var GetStringValue = x_snc_devtools.GetStringValue;
+	var GetValue = x_snc_devtools.GetValue;
+	var GetArrayValue = x_snc_devtools.GetArrayValue;
+	
+
+	var grBusinessProcess = GetBusinessProcessRecord(vBusinessProcess);
+	if (IsValidRecord(grBusinessProcess) == false)
+	{
+		return HtmlRenderError('Could not load the given Business Process record!');
+	}
+
+	var strHtml = '';
+
+	strHtml += '<h1>' + grBusinessProcess.name + '</h1>';
+	strHtml += '<p>' + grBusinessProcess.number + '</p>';
+
+	var strDescription = GetStringValue(grBusinessProcess.summary);
+	if (strDescription == '')
+	{
+		strDescription = GetStringValue(grBusinessProcess.description);
+	}
+
+	if (strDescription == '')
+	{
+		strHtml += HtmlRenderWarning('The business process does not (yet) have a description!');
+	}
+	else
+	{
+		strHtml += '<p>' + strDescription + '</p>';
+	}
+
+	var details = ParseJson(grBusinessProcess.json);
+
+	if (x_snc_devtools.IsObject(details) == false)
+	//if (BusinessProcessValidate(details,false) == false)
+	{
+		strHtml += HtmlRenderWarning('No details have been defined for the business process!');
+		return strHtml;
+	}
+
+	strHtml += HtmlRenderTableOfContents();
+
+
+	//strHtml += '<h2>Output</h2>';
+
+	//strHtml += '<h2>Input</h2>';
+
+	strHtml += '<h2>Roles</h2>';
+
+	var aRoles = GetArrayValue(GetValue(details,'_roles'));
+
+	if (aRoles.length == 0)
+	{
+		strHtml += HtmlRenderWarning('No roles have been defined for the business process!');
+	}
+	else
+	{
+		for (var nRole = 0; nRole < aRoles.length; nRole++)
+		{
+			var role = aRoles[nRole];
+			var strName = GetValue(role,'name');
+			var strDescription = GetValue(role,'description');
+
+			strHtml += '<h3>' + strName + '</h3>';
+			strHtml += '<p>' + strDescription + '</p>'; 
+		}
+	}
+
+	strHtml += '<h2>States</h2>';
+
+	var aStates = GetArrayValue(GetValue(details,'_states'));
+
+	if (aStates.length == 0)
+	{
+		strHtml += HtmlRenderWarning('No states (steps) have been defined for the business process!');
+	}
+	else
+	{
+		for (var nState = 0; nState < aStates.length; nState++)
+		{
+			var state = aStates[nState];
+			var strName = GetValue(state,'name');
+			var strDescription = GetValue(state,'description');
+
+			strHtml += '<h3>' + strName + '</h3>';
+			strHtml += '<p>' + strDescription + '</p>'; 
+		}
+	}
+
+/*
+	strHtml += '<h2>States and Transitions</h2>';
+
+	strHtml += '<h2>Integrations</h2>';
+*/
+
+	return strHtml;
+}]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-02-26 10:21:44</sys_created_on>
+        <sys_id>30c42e6d3b1fb69062bf612c95e45a97</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name>HtmlRenderBusinessProcess</sys_name>
+        <sys_package display_value="AgenticBusinessProcessConsultant WORK IN PROGRESS" source="x_snc_agenticbpc">672e2a382b0f36109083fe395e91bf3e</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="AgenticBusinessProcessConsultant WORK IN PROGRESS">672e2a382b0f36109083fe395e91bf3e</sys_scope>
+        <sys_update_name>sys_script_include_30c42e6d3b1fb69062bf612c95e45a97</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-02-26 10:42:34</sys_updated_on>
+        <x_snc_devtools_sys_ui_script/>
+    </sys_script_include>
+</record_update>
