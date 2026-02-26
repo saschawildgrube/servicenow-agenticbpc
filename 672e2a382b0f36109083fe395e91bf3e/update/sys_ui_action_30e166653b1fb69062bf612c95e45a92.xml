@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_action">
     <sys_ui_action action="INSERT_OR_UPDATE">
-        <action_name>bp_start_interview</action_name>
+        <action_name>agenticbpc_viewer</action_name>
         <active>true</active>
         <client>true</client>
         <client_script_v2><![CDATA[function onClick(g_form) {
 
 }]]></client_script_v2>
-        <comments>Starts the interview and shows the Now Assist Panel.</comments>
-        <condition>IsActive() == true</condition>
+        <comments>Opens the Business Process viewer.</comments>
+        <condition>IsActive()</condition>
         <form_action>true</form_action>
         <form_button>true</form_button>
         <form_button_v2>false</form_button_v2>
@@ -27,41 +27,17 @@
         <list_save_with_form_button>false</list_save_with_form_button>
         <list_style/>
         <messages/>
-        <name>Start Interview</name>
-        <onclick>onClickStartInterview()</onclick>
-        <order>10000</order>
-        <script><![CDATA[function onClickStartInterview()
+        <name>Viewer</name>
+        <onclick>onClickBusinessProcessViewer()</onclick>
+        <order>10100</order>
+        <script><![CDATA[function onClickBusinessProcessViewer()
 {
-	var strTitle = 'Agentic Business Process Consultant';
-	
-	function StateStart()
+	var strSysId = GetCurrentRecordSysId();
+	if (strSysId != '')
 	{
-		var strBusinessProcessSysId = GetCurrentRecordSysId();
-
-		ServerRequest(
-			'x_snc_agenticbpc.AgenticBusinessProcessConsultantClientAPI',
-			'StartInterview',
-			{
-				business_process_sys_id: strBusinessProcessSysId
-			},StateResponse);	
+		var strUrl = '/nav_to.do?uri=%2Fx_snc_agenticbpc_viewer.do%3Fbusiness_process%3D'+strSysId;
+		RedirectToUrl(strUrl, true);
 	}
-	
-	function StateResponse(strConversationSysId)
-	{
-		if (strConversationSysId == false)
-		{
-			DoModalMessage(strTitle,'Failed to start interview.',StateFinish);
-		}
-		else
-		{
-			ShowNowAssistPanel(strConversationSysId);
-		} 
-	}
-	
-	function StateFinish()
-	{}
-	
-	StateStart();
 }]]></script>
         <show_insert>false</show_insert>
         <show_multiple_update>false</show_multiple_update>
@@ -69,19 +45,19 @@
         <show_update>true</show_update>
         <sys_class_name>sys_ui_action</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2026-02-16 16:37:19</sys_created_on>
+        <sys_created_on>2026-02-26 10:05:17</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
-        <sys_id>f4eb50ae3bc3365062bf612c95e45ab4</sys_id>
-        <sys_mod_count>7</sys_mod_count>
-        <sys_name>Start Interview</sys_name>
+        <sys_id>30e166653b1fb69062bf612c95e45a92</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Viewer</sys_name>
         <sys_overrides/>
         <sys_package display_value="AgenticBusinessProcessConsultant WORK IN PROGRESS" source="x_snc_agenticbpc">672e2a382b0f36109083fe395e91bf3e</sys_package>
         <sys_policy/>
         <sys_scope display_value="AgenticBusinessProcessConsultant WORK IN PROGRESS">672e2a382b0f36109083fe395e91bf3e</sys_scope>
-        <sys_update_name>sys_ui_action_f4eb50ae3bc3365062bf612c95e45ab4</sys_update_name>
+        <sys_update_name>sys_ui_action_30e166653b1fb69062bf612c95e45a92</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-02-26 10:03:11</sys_updated_on>
+        <sys_updated_on>2026-02-26 10:05:17</sys_updated_on>
         <table>x_snc_agenticbpc_business_process</table>
         <ui11_compatible>true</ui11_compatible>
         <ui16_compatible>false</ui16_compatible>
