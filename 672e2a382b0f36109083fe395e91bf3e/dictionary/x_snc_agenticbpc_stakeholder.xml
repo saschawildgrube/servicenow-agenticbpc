@@ -1,3 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element db_object_id="45bc04472b9b36109083fe395e91bf4d" label="Stakeholder" max_length="40" name="x_snc_agenticbpc_stakeholder" type="collection"/>
+    <element db_object_id="45bc04472b9b36109083fe395e91bf4d" label="Stakeholder" max_length="40" name="x_snc_agenticbpc_stakeholder" type="collection">
+        <element display="true" label="User" mandatory="true" max_length="32" name="user" reference="sys_user" reference_qual="roles=x_snc_agenticbpc.stakeholder^EQ" reference_qual_condition="roles=x_snc_agenticbpc.stakeholder^EQ" type="reference"/>
+        <element label="Notes" max_length="10000" name="notes" type="string_full_utf8"/>
+        <element label="Business Process" mandatory="true" max_length="32" name="business_process" read_only="true" reference="x_snc_agenticbpc_business_process" type="reference"/>
+        <index name="index">
+            <element name="business_process"/>
+        </index>
+        <index name="index2">
+            <element name="user"/>
+        </index>
+    </element>
 </database>
