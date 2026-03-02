@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_user_role">
+    <sys_user_role action="INSERT_OR_UPDATE">
+        <assignable_by/>
+        <can_delegate>true</can_delegate>
+        <description>Role to be used by the AI Agent technical user.</description>
+        <elevated_privilege>false</elevated_privilege>
+        <federated_id>lRVhIVswA9JqzBOZXrGC/Edil/748Ey9DXm9ZIe4mog=</federated_id>
+        <grantable>true</grantable>
+        <includes_roles/>
+        <name>x_snc_agenticbpc.ai</name>
+        <scoped_admin>false</scoped_admin>
+        <suffix>ai</suffix>
+        <sys_class_name>sys_user_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-03-02 12:17:34</sys_created_on>
+        <sys_id>48e6af362b1736109083fe395e91bff0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_snc_agenticbpc.ai</sys_name>
+        <sys_package display_value="AgenticBusinessProcessConsultant WORK IN PROGRESS" source="x_snc_agenticbpc">672e2a382b0f36109083fe395e91bf3e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AgenticBusinessProcessConsultant WORK IN PROGRESS">672e2a382b0f36109083fe395e91bf3e</sys_scope>
+        <sys_update_name>sys_user_role_48e6af362b1736109083fe395e91bff0</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-03-02 12:17:34</sys_updated_on>
+    </sys_user_role>
+</record_update>
