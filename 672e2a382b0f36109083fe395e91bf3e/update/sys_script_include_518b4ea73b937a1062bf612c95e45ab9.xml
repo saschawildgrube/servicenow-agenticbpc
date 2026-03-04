@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_snc_agenticbpc.AiToolGetStakeholder</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description>Returns the details of the stakeholder being interviewed.</description>
+        <mobile_callable>false</mobile_callable>
+        <name>AiToolGetStakeholder</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[function AiToolGetStakeholder(vBusinessProcess,vUser)
+{
+
+	var IsValidRecord = x_snc_devtools.IsValidRecord;
+	var ParseJson = x_snc_devtools.ParseJson;
+	var IsObject = x_snc_devtools.IsObject;
+	var GetStringValue = x_snc_devtools.GetStringValue;
+
+	var grBP = GetBusinessProcessRecord(vBusinessProcess);
+
+	if (IsValidRecord(grBP) == false)
+	{
+		return { message: 'The Business Process could not be found.' };
+	}
+
+	if (vUser == null)
+	{
+		vUser = gs.getUserID();
+	}
+
+	var grSH = GetStakeholderRecord(vBusinessProcess,vUser);
+
+	var details = {};
+
+/*
+	var details = ParseJson(grBP.json);
+	if (IsObject(details) == false)
+	{
+		return { name: GetStringValue(grBP.name) };
+	}
+	*/
+
+	return details; 
+
+
+
+}
+]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-03-04 13:36:38</sys_created_on>
+        <sys_id>518b4ea73b937a1062bf612c95e45ab9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>AiToolGetStakeholder</sys_name>
+        <sys_package display_value="AgenticBusinessProcessConsultant WORK IN PROGRESS" source="x_snc_agenticbpc">672e2a382b0f36109083fe395e91bf3e</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="AgenticBusinessProcessConsultant WORK IN PROGRESS">672e2a382b0f36109083fe395e91bf3e</sys_scope>
+        <sys_update_name>sys_script_include_518b4ea73b937a1062bf612c95e45ab9</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-03-04 13:36:38</sys_updated_on>
+        <x_snc_devtools_sys_ui_script/>
+    </sys_script_include>
+</record_update>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_snc_agenticbpc.GetStakeholderRecord</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description>Returns the GlideRecord object of the Stakeholder of a Business Process.&#13;
+EIther based on a Sys ID (or the GlideRecord) of the Stakeholder record itself, or based on the combination of a Business Process and a User.</description>
+        <mobile_callable>false</mobile_callable>
+        <name>GetStakeholderRecord</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[function GetStakeholderRecord(vBusinessProcessOrStakeholder,vUser)
+{
+	var GetRecord = x_snc_devtools.GetRecord;
+	var IsValidRecord = x_snc_devtools.IsValidRecord;
+	var GetUserRecord = x_snc_devtools.GetUserRecord;
+	
+	var grStakeholder = GetRecord('x_snc_agenticbpc_stakeholder',vBusinessProcessOrStakeholder);
+	if (IsValidRecord(grStakeholder) == true)
+	{
+		return grStakeholder;
+	}
+
+	var grBusinessProcess = GetBusinessProcessRecord(vBusinessProcessOrStakeholder);
+	if (IsValidRecord(grBusinessProcess) == false)
+	{
+		return false;
+	}
+
+	var grUser = GetUserRecord(vUser);
+	if (IsValidRecord(grUser) == false)
+	{
+		return false;
+	}
+
+	var grStakeholder = new GlideRecord('x_snc_agenticbpc_stakeholder');
+	grStakeholder.addQuery('user','=',grUser.sys_id);
+	grStakeholder.addQuery('business_process','=',grBusinessProcess.sys_id);
+	grStakeholder.query();
+	if (grStakeholder.getRowCount() != 1)
+	{
+		return false;
+	}
+	grStakeholder.next();
+	return grStakeholder;
+
+}]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-03-04 13:44:32</sys_created_on>
+        <sys_id>55dc0eab3b937a1062bf612c95e45a52</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>GetStakeholderRecord</sys_name>
+        <sys_package display_value="AgenticBusinessProcessConsultant WORK IN PROGRESS" source="x_snc_agenticbpc">672e2a382b0f36109083fe395e91bf3e</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="AgenticBusinessProcessConsultant WORK IN PROGRESS">672e2a382b0f36109083fe395e91bf3e</sys_scope>
+        <sys_update_name>sys_script_include_55dc0eab3b937a1062bf612c95e45a52</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-03-04 13:54:15</sys_updated_on>
+        <x_snc_devtools_sys_ui_script/>
+    </sys_script_include>
+</record_update>

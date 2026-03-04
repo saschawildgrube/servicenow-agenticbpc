@@ -27,7 +27,7 @@
         <sys_update_name>sn_aia_agent_tool_m2m_d2c0d8032bdb36109083fe395e91bff9</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2026-03-02 15:20:19</sys_updated_on>
-        <tool display_value="Get Stakeholder">1ec054032bdb36109083fe395e91bfde</tool>
+        <tool display_value="Agentic Business Process Consultant - Get Stakeholder">1ec054032bdb36109083fe395e91bfde</tool>
         <tool_attributes>{}</tool_attributes>
         <transformation_instructions/>
     </sn_aia_agent_tool_m2m>
