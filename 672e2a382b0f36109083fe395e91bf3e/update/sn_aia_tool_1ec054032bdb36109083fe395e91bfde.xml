@@ -3,7 +3,7 @@
         <active>true</active>
         <description>Retrieves the details of the stakeholder being interviewed.</description>
         <input_schema>[{"name":"business_process","description":"The Business Process' name, number or Sys ID.","mandatory":true}]</input_schema>
-        <name>Agentic Business Process Consultant - Get Stakeholder</name>
+        <name>Get Stakeholder</name>
         <record_type>custom</record_type>
         <script><![CDATA[(function(inputs) {
 	return AiToolGetStakeholder(inputs.business_process);
@@ -13,15 +13,15 @@
         <sys_created_on>2026-03-02 15:20:19</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_id>1ec054032bdb36109083fe395e91bfde</sys_id>
-        <sys_mod_count>3</sys_mod_count>
-        <sys_name>Agentic Business Process Consultant - Get Stakeholder</sys_name>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>Get Stakeholder</sys_name>
         <sys_overrides/>
         <sys_package display_value="AgenticBusinessProcessConsultant WORK IN PROGRESS" source="x_snc_agenticbpc">672e2a382b0f36109083fe395e91bf3e</sys_package>
         <sys_policy/>
         <sys_scope display_value="AgenticBusinessProcessConsultant WORK IN PROGRESS">672e2a382b0f36109083fe395e91bf3e</sys_scope>
         <sys_update_name>sn_aia_tool_1ec054032bdb36109083fe395e91bfde</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-03-04 13:38:30</sys_updated_on>
+        <sys_updated_on>2026-03-04 15:51:42</sys_updated_on>
         <target_document/>
         <target_document_table>sn_aia_tool</target_document_table>
         <type>script</type>

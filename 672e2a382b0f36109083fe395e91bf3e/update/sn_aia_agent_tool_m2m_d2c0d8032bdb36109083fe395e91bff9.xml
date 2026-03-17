@@ -6,19 +6,20 @@
         <display_output>false</display_output>
         <document_status/>
         <execution_mode>autopilot</execution_mode>
-        <inputs>[]</inputs>
+        <inputs>[{"name":"business_process","value":"","description":"The Business Process' name, number or Sys ID.","mandatory":true,"invalidMessage":null}]</inputs>
         <max_auto_executions>10</max_auto_executions>
         <name>Get Stakeholder</name>
         <output_transformation_strategy>none</output_transformation_strategy>
         <post_message/>
         <post_processing_script/>
         <pre_message>Getting infos about stakeholder</pre_message>
+        <pre_run>false</pre_run>
         <sys_class_name>sn_aia_agent_tool_m2m</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2026-03-02 15:20:19</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_id>d2c0d8032bdb36109083fe395e91bff9</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name>Get Stakeholder</sys_name>
         <sys_overrides/>
         <sys_package display_value="AgenticBusinessProcessConsultant WORK IN PROGRESS" source="x_snc_agenticbpc">672e2a382b0f36109083fe395e91bf3e</sys_package>
@@ -26,8 +27,9 @@
         <sys_scope display_value="AgenticBusinessProcessConsultant WORK IN PROGRESS">672e2a382b0f36109083fe395e91bf3e</sys_scope>
         <sys_update_name>sn_aia_agent_tool_m2m_d2c0d8032bdb36109083fe395e91bff9</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-03-02 15:20:19</sys_updated_on>
-        <tool display_value="Agentic Business Process Consultant - Get Stakeholder">1ec054032bdb36109083fe395e91bfde</tool>
+        <sys_updated_on>2026-03-04 15:52:48</sys_updated_on>
+        <timeout/>
+        <tool display_value="Get Stakeholder">1ec054032bdb36109083fe395e91bfde</tool>
         <tool_attributes>{}</tool_attributes>
         <transformation_instructions/>
     </sn_aia_agent_tool_m2m>

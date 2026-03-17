@@ -50,14 +50,14 @@ EIther based on a Sys ID (or the GlideRecord) of the Stakeholder record itself, 
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2026-03-04 13:44:32</sys_created_on>
         <sys_id>55dc0eab3b937a1062bf612c95e45a52</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name>GetStakeholderRecord</sys_name>
         <sys_package display_value="AgenticBusinessProcessConsultant WORK IN PROGRESS" source="x_snc_agenticbpc">672e2a382b0f36109083fe395e91bf3e</sys_package>
-        <sys_policy>read</sys_policy>
+        <sys_policy/>
         <sys_scope display_value="AgenticBusinessProcessConsultant WORK IN PROGRESS">672e2a382b0f36109083fe395e91bf3e</sys_scope>
         <sys_update_name>sys_script_include_55dc0eab3b937a1062bf612c95e45a52</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-03-04 13:54:15</sys_updated_on>
+        <sys_updated_on>2026-03-17 12:55:52</sys_updated_on>
         <x_snc_devtools_sys_ui_script/>
     </sys_script_include>
 </record_update>

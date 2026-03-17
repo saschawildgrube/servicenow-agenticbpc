@@ -2,16 +2,17 @@
     <sn_aia_agent_config action="INSERT_OR_UPDATE">
         <active>true</active>
         <agent display_value="Agentic Business Process Consultant">c7a828ed2bcf3e109083fe395e91bf64</agent>
+        <agent_learning>false</agent_learning>
         <doc_url/>
         <icon_url/>
         <public>false</public>
-        <run_as_user display_value="AI Agentic BPC">564de3362b5736109083fe395e91bf16</run_as_user>
+        <run_as_user/>
         <sys_class_name>sn_aia_agent_config</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2026-02-13 15:02:36</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_id>4db9ec612b037e109083fe395e91bf1e</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name/>
         <sys_overrides/>
         <sys_package display_value="AgenticBusinessProcessConsultant WORK IN PROGRESS" source="x_snc_agenticbpc">672e2a382b0f36109083fe395e91bf3e</sys_package>
@@ -19,6 +20,6 @@
         <sys_scope display_value="AgenticBusinessProcessConsultant WORK IN PROGRESS">672e2a382b0f36109083fe395e91bf3e</sys_scope>
         <sys_update_name>sn_aia_agent_config_4db9ec612b037e109083fe395e91bf1e</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-03-02 12:47:18</sys_updated_on>
+        <sys_updated_on>2026-03-04 15:06:10</sys_updated_on>
     </sn_aia_agent_config>
 </record_update>

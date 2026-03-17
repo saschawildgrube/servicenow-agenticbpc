@@ -9,7 +9,7 @@
         <mobile_callable>false</mobile_callable>
         <name>AiToolUpdateBusinessProcess</name>
         <sandbox_callable>false</sandbox_callable>
-        <script><![CDATA[function AiToolUpdateBusinessProcess(inputs)
+        <script><![CDATA[function AiToolUpdateBusinessProcess(vBusinessProcess,strDetails)
 {
 	var IsValidRecord = x_snc_devtools.IsValidRecord;
 	var GetValue = x_snc_devtools.GetValue;
@@ -17,13 +17,12 @@
 	var IsObject = x_snc_devtools.IsObject;
 	var MakeJson = x_snc_devtools.MakeJson;
 		
-	var grBP = GetBusinessProcessRecord(GetValue(inputs,'business_process'));
+	var grBP = GetBusinessProcessRecord(vBusinessProcess);
 	if (IsValidRecord(grBP) == false)
 	{
-		//Error('The Business Process could not be found.');
 		return { message: 'The Business Process could not be found.' };
 	}
-	var details = ParseJson(inputs.details);
+	var details = ParseJson(strDetails);
 	if (IsObject(details) == false)
 	{
 		return { message: 'The Business Process details are not provided as a valid JSON string' };
@@ -42,14 +41,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2026-02-25 09:24:25</sys_created_on>
         <sys_id>e54f0d913b13b29062bf612c95e45a5d</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_name>AiToolUpdateBusinessProcess</sys_name>
         <sys_package display_value="AgenticBusinessProcessConsultant WORK IN PROGRESS" source="x_snc_agenticbpc">672e2a382b0f36109083fe395e91bf3e</sys_package>
-        <sys_policy>read</sys_policy>
+        <sys_policy/>
         <sys_scope display_value="AgenticBusinessProcessConsultant WORK IN PROGRESS">672e2a382b0f36109083fe395e91bf3e</sys_scope>
         <sys_update_name>sys_script_include_e54f0d913b13b29062bf612c95e45a5d</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-03-02 12:13:55</sys_updated_on>
+        <sys_updated_on>2026-03-17 12:55:52</sys_updated_on>
         <x_snc_devtools_sys_ui_script/>
     </sys_script_include>
 </record_update>
