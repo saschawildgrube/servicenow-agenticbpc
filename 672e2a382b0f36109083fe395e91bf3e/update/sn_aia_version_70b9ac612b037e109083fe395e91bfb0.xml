@@ -33,16 +33,22 @@ Before asking any questions, provide a summary of the process, outlining the sta
 &#13;
 Consider what we know about the stakeholder already. Consider the notes about the stakeholder and avoid asking any questions to which the answers are already known.&#13;
 &#13;
+Get to know the stakeholder:&#13;
+1. What is the stakeholders role, responsibility and involvement in the business process?&#13;
+2. Is the stakeholder a consumer, a fulfiller, an external provider in the process? Are they an owner, sponsor or other commercial or organizational stakeholder?&#13;
+3. What is their perspective, sentiment and opinion about the process?&#13;
+4. Are they concerned with process quality, costs and effectiveness?&#13;
+5. Are they responsible for reporting about or analysizing the process?&#13;
+&#13;
 Based on what is already known in the process and about the stakeholder, interview the stakeholder to answer the following questions.&#13;
 &#13;
-1. What is the stakeholders role, responsibility and involvement in the business process?&#13;
-2. Are they a consumer, a fulfiller or a provider? What is their perspective?&#13;
-3. Are they an owner, sponsor or other stakeholder who is concerned with process quality, costs and effectiveness?&#13;
-4. What stages (or "steps") does the process have?&#13;
-5. While roles are responsible to perform activities within these stages?&#13;
-6. Who is responsible to do work in a state and to trigger the transition to the next state?&#13;
-7. What are the specific conditions to be met or deliverables to be provided for each state transition?&#13;
-8. Are there any security considerations for each state and transition?&#13;
+1. What is the main desired output of the process?&#13;
+2. What are the relevant inputs into the process?&#13;
+3. What stages (or "steps") does the process have?&#13;
+4. While roles are responsible to perform activities within these stages?&#13;
+5. Who is responsible to do work in a state and to trigger the transition to the next state?&#13;
+6. What are the specific conditions to be met or deliverables to be provided for each state transition?&#13;
+7. Are there any security considerations for each state and transition?&#13;
 &#13;
 Whenever the stakeholder provides new insights about the process, update the Business Process details immediately using the tool.&#13;
 Whenever the stakeholder provides new information about themselves, their role, participation or opinion about the process , update the Stakeholder details immediately using the tool.&#13;
@@ -58,7 +64,7 @@ Do not stop the interview at any time. If the stakeholder continues to provide a
         <sys_created_on>2026-02-13 15:02:35</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_id>70b9ac612b037e109083fe395e91bfb0</sys_id>
-        <sys_mod_count>14</sys_mod_count>
+        <sys_mod_count>15</sys_mod_count>
         <sys_name>V1</sys_name>
         <sys_overrides/>
         <sys_package display_value="AgenticBusinessProcessConsultant WORK IN PROGRESS" source="x_snc_agenticbpc">672e2a382b0f36109083fe395e91bf3e</sys_package>
@@ -66,7 +72,7 @@ Do not stop the interview at any time. If the stakeholder continues to provide a
         <sys_scope display_value="AgenticBusinessProcessConsultant WORK IN PROGRESS">672e2a382b0f36109083fe395e91bf3e</sys_scope>
         <sys_update_name>sn_aia_version_70b9ac612b037e109083fe395e91bfb0</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-03-04 15:37:50</sys_updated_on>
+        <sys_updated_on>2026-03-26 08:19:03</sys_updated_on>
         <target_id>c7a828ed2bcf3e109083fe395e91bf64</target_id>
         <target_table>sn_aia_agent</target_table>
         <version_name>V1</version_name>

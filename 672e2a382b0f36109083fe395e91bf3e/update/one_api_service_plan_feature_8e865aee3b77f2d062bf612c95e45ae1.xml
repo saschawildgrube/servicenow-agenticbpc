@@ -4,29 +4,30 @@
         <applicability_condition/>
         <applicability_condition_expression/>
         <applicability_condition_table/>
-        <applicability_script><![CDATA[(function(currentInputs, context) {
-    return currentInputs.query !== "";
-})(currentInputs, context);]]></applicability_script>
+        <applicability_script><![CDATA[(function(featureInput, previousFeatureOutputs) {  
+	/* customize condition logic here, return true or false */  
+	return true;
+  })(featureInput, previousFeatureOutputs);]]></applicability_script>
         <applicability_type>script</applicability_type>
         <delay_output_processing>false</delay_output_processing>
         <depends_on/>
         <depends_on_list/>
         <error_policy>continue_service_plan_execution</error_policy>
-        <feature display_value="542203de7fe81210a01c7d8b7d86658c">2949a8212b037e109083fe395e91bff9</feature>
+        <feature display_value="95c00f34431012106c3603295bb8f2b5">0a865aee3b77f2d062bf612c95e45ada</feature>
         <return_request>false</return_request>
-        <service_plan display_value="___$y$t3m_bu1163r___-917de35c7f35921032d293f10d866599, 542203de7fe81210a01c7d8b7d86658c, e511d9f77f211210210ca65c4d8665eb, d143c483ff68e2101dbaffffffffff23-default">2549e8212b037e109083fe395e91bf02</service_plan>
+        <service_plan display_value="___$y$t3m_bu1163r___-95c00f34431012106c3603295bb8f2b5-default">ca865aee3b77f2d062bf612c95e45adf</service_plan>
         <sys_class_name>one_api_service_plan_feature</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2026-02-13 15:00:44</sys_created_on>
-        <sys_id>a549e8212b037e109083fe395e91bf08</sys_id>
+        <sys_created_on>2026-03-26 08:19:05</sys_created_on>
+        <sys_id>8e865aee3b77f2d062bf612c95e45ae1</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name>___$y$t3m_bu1163r___-917de35c7f35921032d293f10d866599, 542203de7fe81210a01c7d8b7d86658c, e511d9f77f211210210ca65c4d8665eb, d143c483ff68e2101dbaffffffffff23-default: 542203de7fe81210a01c7d8b7d86658c</sys_name>
+        <sys_name>___$y$t3m_bu1163r___-95c00f34431012106c3603295bb8f2b5-default: 95c00f34431012106c3603295bb8f2b5</sys_name>
         <sys_package display_value="AgenticBusinessProcessConsultant WORK IN PROGRESS" source="x_snc_agenticbpc">672e2a382b0f36109083fe395e91bf3e</sys_package>
         <sys_policy/>
         <sys_scope display_value="AgenticBusinessProcessConsultant WORK IN PROGRESS">672e2a382b0f36109083fe395e91bf3e</sys_scope>
-        <sys_update_name>one_api_service_plan_feature_a549e8212b037e109083fe395e91bf08</sys_update_name>
+        <sys_update_name>one_api_service_plan_feature_8e865aee3b77f2d062bf612c95e45ae1</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-02-13 15:00:44</sys_updated_on>
+        <sys_updated_on>2026-03-26 08:19:05</sys_updated_on>
         <timeout_policy>continue_service_plan_execution</timeout_policy>
         <timeout_sec>60</timeout_sec>
     </one_api_service_plan_feature>

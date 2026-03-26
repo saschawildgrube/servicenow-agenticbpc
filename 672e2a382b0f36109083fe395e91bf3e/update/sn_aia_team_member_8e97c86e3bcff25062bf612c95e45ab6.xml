@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_aia_team_member">
     <sn_aia_team_member action="INSERT_OR_UPDATE">
         <agent display_value="Agentic Business Process Consultant">c7a828ed2bcf3e109083fe395e91bf64</agent>
+        <memory_scope>global</memory_scope>
         <sys_class_name>sn_aia_team_member</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2026-02-16 15:07:30</sys_created_on>

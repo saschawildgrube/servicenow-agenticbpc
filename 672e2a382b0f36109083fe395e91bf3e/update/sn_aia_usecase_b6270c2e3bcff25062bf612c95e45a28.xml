@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_aia_usecase">
     <sn_aia_usecase action="INSERT_OR_UPDATE">
+        <advanced_mode>false</advanced_mode>
         <applicability_script><![CDATA[/** 
  * Function to process inputs related to ServiceNow change request operations 
  * 
@@ -27,6 +28,8 @@
     return false;
 })(inputs);]]></applicability_script>
         <base_plan>Use the "Agentic Business Process Consultant" AI Agent to interview the user and gather insights.</base_plan>
+        <condition/>
+        <context_processing_script/>
         <description>Interview users to gather insights about a business process.</description>
         <execution_mode>copilot</execution_mode>
         <internal_name>global.x_snc_agenticbpc.Agentic Business Process Consultant</internal_name>
