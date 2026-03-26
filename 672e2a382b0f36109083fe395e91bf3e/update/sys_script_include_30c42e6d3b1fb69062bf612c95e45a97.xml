@@ -19,7 +19,8 @@
 	var GetStringValue = x_snc_devtools.GetStringValue;
 	var GetValue = x_snc_devtools.GetValue;
 	var GetArrayValue = x_snc_devtools.GetArrayValue;
-	
+	var HtmlEncode = x_snc_devtools.HtmlEncode;
+
 
 	var grBusinessProcess = GetBusinessProcessRecord(vBusinessProcess);
 	if (IsValidRecord(grBusinessProcess) == false)
@@ -59,9 +60,19 @@
 	strHtml += HtmlRenderTableOfContents();
 
 
-	//strHtml += '<h2>Output</h2>';
+	var strOutput = GetStringValue(GetValue(details,'output'));
+	if (strOutput != '')
+	{
+		strHtml += '<h2>Output</h2>';
+		strHtml += '<p>' + HtmlEncode(strOutput) + '</p>';
+	}
 
-	//strHtml += '<h2>Input</h2>';
+	var strInput = GetStringValue(GetValue(details,'input'));
+	if (strInput != '')
+	{
+		strHtml += '<h2>Input</h2>';
+		strHtml += '<p>' + HtmlEncode(strInput) + '</p>';
+	}
 
 	strHtml += '<h2>Roles</h2>';
 
@@ -117,14 +128,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2026-02-26 10:21:44</sys_created_on>
         <sys_id>30c42e6d3b1fb69062bf612c95e45a97</sys_id>
-        <sys_mod_count>7</sys_mod_count>
+        <sys_mod_count>9</sys_mod_count>
         <sys_name>HtmlRenderBusinessProcess</sys_name>
         <sys_package display_value="AgenticBusinessProcessConsultant WORK IN PROGRESS" source="x_snc_agenticbpc">672e2a382b0f36109083fe395e91bf3e</sys_package>
         <sys_policy/>
         <sys_scope display_value="AgenticBusinessProcessConsultant WORK IN PROGRESS">672e2a382b0f36109083fe395e91bf3e</sys_scope>
         <sys_update_name>sys_script_include_30c42e6d3b1fb69062bf612c95e45a97</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-03-17 12:55:51</sys_updated_on>
+        <sys_updated_on>2026-03-26 10:46:34</sys_updated_on>
         <x_snc_devtools_sys_ui_script/>
     </sys_script_include>
 </record_update>

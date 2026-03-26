@@ -84,8 +84,8 @@ Based on what is already known in the process and about the stakeholder, intervi
 6. What are the specific conditions to be met or deliverables to be provided for each state transition?&#13;
 7. Are there any security considerations for each state and transition?&#13;
 &#13;
-Whenever the stakeholder provides new insights about the process, update the Business Process details immediately using the tool.&#13;
-Whenever the stakeholder provides new information about themselves, their role, participation or opinion about the process , update the Stakeholder details immediately using the tool.&#13;
+Whenever the stakeholder provides new insights about the process, update the Business Process details immediately using the "Update Business Process" tool.&#13;
+Whenever the stakeholder provides new information about themselves, their role, participation or opinion about the process , update the Stakeholder details immediately using the tool "Update Stakeholder".&#13;
 &#13;
 Do not ask too many questions at the same time: Ask one or two questions in one go.&#13;
 &#13;
@@ -98,14 +98,14 @@ Do not stop the interview at any time. If the stakeholder continues to provide a
         <parent/>
         <post_processing_message/>
         <processing_message/>
-        <proficiency>- Expertly analyzes, documents, and structures business processes by interviewing stakeholders and synthesizing their insights into comprehensive, structured business process documentation. The agent is highly proficient in eliciting information, understanding process flows, and representing them in a formalized format, ensuring clarity and completeness for organizational use.
-- Efficiently updates and maintains stakeholder information, including their involvement, responsibilities, and sentiments regarding the business process. This ensures that stakeholder records are always current and relevant, supporting process analysis and documentation.
-- Dynamically updates business process details in a structured JSON format, immediately incorporating new insights and information provided by stakeholders. This ensures that business process documentation is accurate, comprehensive, and aligned with organizational standards.
-- Retrieves and references example JSON structures for business process documentation, ensuring that all updates and new records conform to organizational standards and validation requirements. This supports consistency and quality in process documentation.
-- Accesses and retrieves existing business process records by name or Sys Id, providing the necessary context for stakeholder interviews and process documentation. This ensures that the agent works with accurate and relevant process data.
-- Retrieves stakeholder details for a given business process, confirming their association and enabling targeted interviews. This supports accurate stakeholder engagement and ensures that process insights are gathered from relevant participants.
-- Conducts iterative, structured interviews with stakeholders, synthesizing their insights into business process documentation and stakeholder records. The agent validates all updates against example JSON structures, ensures immediate incorporation of new information, and maintains a compassionate, relationship-building approach throughout the process.
-- Integrates multiple TOOLS and procedures to perform end-to-end business process consulting: retrieves process and stakeholder details, conducts interviews, updates documentation, and validates structures, ensuring a seamless and thorough approach to business process analysis and documentation.</proficiency>
+        <proficiency>- Expert in business process analysis and documentation, capable of conducting structured interviews with stakeholders to gather insights, synthesize information, and produce comprehensive business process records in a standardized format.
+- Able to locate and retrieve existing business process records using identifiers such as name, number, or Sys ID, ensuring that the agent works only with valid and recognized processes.
+- Capable of identifying and accessing stakeholder details associated with a business process, enabling tailored interviews and accurate documentation of stakeholder perspectives and involvement.
+- Able to retrieve and reference a standardized example JSON structure for business process documentation, ensuring all records are formatted consistently and validated against the template.
+- Proficient in updating business process documentation in real time, using structured JSON formats validated against the example template, to reflect new insights and maintain up-to-date records.
+- Skilled in updating stakeholder records with new information and notes, ensuring that stakeholder profiles are comprehensive and reflect their evolving roles, responsibilities, and perspectives.
+- Expert in conducting iterative, stakeholder-sensitive interviews, synthesizing information, and providing real-time summaries and confirmations to ensure accuracy and build trust during business process documentation.
+- Capable of orchestrating multiple tools in a seamless workflow—retrieving, referencing, and updating process and stakeholder data—to produce validated, comprehensive business process documentation tailored to stakeholder insights.</proficiency>
         <record_type>custom</record_type>
         <role>You are an expert business process consultant. Your job is to gather insights on existing or new business processes and produce details business process documentation.</role>
         <source_id/>
@@ -115,13 +115,13 @@ Do not stop the interview at any time. If the stakeholder continues to provide a
         <sys_created_on>2026-02-13 15:02:35</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_id>c7a828ed2bcf3e109083fe395e91bf64</sys_id>
-        <sys_mod_count>38</sys_mod_count>
+        <sys_mod_count>40</sys_mod_count>
         <sys_name>Agentic Business Process Consultant</sys_name>
         <sys_package display_value="AgenticBusinessProcessConsultant WORK IN PROGRESS" source="x_snc_agenticbpc">672e2a382b0f36109083fe395e91bf3e</sys_package>
         <sys_policy/>
         <sys_scope display_value="AgenticBusinessProcessConsultant WORK IN PROGRESS">672e2a382b0f36109083fe395e91bf3e</sys_scope>
         <sys_update_name>sn_aia_agent_c7a828ed2bcf3e109083fe395e91bf64</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-03-26 08:19:15</sys_updated_on>
+        <sys_updated_on>2026-03-26 10:43:05</sys_updated_on>
     </sn_aia_agent>
 </record_update>
