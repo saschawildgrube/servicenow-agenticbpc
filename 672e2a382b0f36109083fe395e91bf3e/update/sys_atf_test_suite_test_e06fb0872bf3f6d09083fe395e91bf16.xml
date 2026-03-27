@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_test_suite_test">
+    <sys_atf_test_suite_test action="INSERT_OR_UPDATE">
+        <abort_on_failure>false</abort_on_failure>
+        <order>100</order>
+        <sys_class_name>sys_atf_test_suite_test</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-03-27 15:15:18</sys_created_on>
+        <sys_id>e06fb0872bf3f6d09083fe395e91bf16</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>646fb0872bf3f6d09083fe395e91bf0f</sys_name>
+        <sys_package display_value="AgenticBusinessProcessConsultant WORK IN PROGRESS" source="x_snc_agenticbpc">672e2a382b0f36109083fe395e91bf3e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AgenticBusinessProcessConsultant WORK IN PROGRESS">672e2a382b0f36109083fe395e91bf3e</sys_scope>
+        <sys_update_name>sys_atf_test_suite_test_e06fb0872bf3f6d09083fe395e91bf16</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-03-27 15:22:18</sys_updated_on>
+        <test display_value="AgenticBusinessProcessConsultant - AiToolValidateBusinessProcess">646fb0872bf3f6d09083fe395e91bf0f</test>
+        <test_suite display_value="AgenticBusinessProcessConsultant">c7cf2e3c2b0f36109083fe395e91bf79</test_suite>
+    </sys_atf_test_suite_test>
+</record_update>

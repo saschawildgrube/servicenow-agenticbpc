@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_aia_tool">
+    <sn_aia_tool action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <description>Validate the JSON object that contains the business process details.</description>
+        <input_schema>[{"name":"details","description":"The JSON object that contains the details of the Business Process.","mandatory":false}]</input_schema>
+        <name>Validate Business Process</name>
+        <record_type>custom</record_type>
+        <script><![CDATA[(function(inputs) {
+
+    return AiToolValidateBusinessProcess(inputs.details);
+
+})(inputs);]]></script>
+        <sys_class_name>sn_aia_tool</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-03-27 13:26:09</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>7166a40b2bffb6d09083fe395e91bf92</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Validate Business Process</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="AgenticBusinessProcessConsultant WORK IN PROGRESS" source="x_snc_agenticbpc">672e2a382b0f36109083fe395e91bf3e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AgenticBusinessProcessConsultant WORK IN PROGRESS">672e2a382b0f36109083fe395e91bf3e</sys_scope>
+        <sys_update_name>sn_aia_tool_7166a40b2bffb6d09083fe395e91bf92</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-03-27 13:26:09</sys_updated_on>
+        <target_document/>
+        <target_document_table>sn_aia_tool</target_document_table>
+        <type>script</type>
+    </sn_aia_tool>
+</record_update>
