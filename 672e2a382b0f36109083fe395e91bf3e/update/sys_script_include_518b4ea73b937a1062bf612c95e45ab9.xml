@@ -23,7 +23,6 @@
 	{
 		return { message: 'The Business Process could not be found.' };
 	}
-	Debug(grBusinessProcess);
 
 	if (vUser == null)
 	{
@@ -31,18 +30,14 @@
 		//vUser = '';
 	}
 
-	Debug(vUser);
-
 	var grUser = GetUserRecord(vUser);
 	if (IsValidRecord(grUser) == false)
 	{
 		return { message: 'Could not load the user record.' };
 	}	
 
-	Debug(grUser);
-
 	var grStakeholder = GetStakeholderRecord(grBusinessProcess,grUser);
-	Debug(grStakeholder);
+
 	if (IsValidRecord(grStakeholder) == false)
 	{
 		return { message: 'The user is not a stakeholder of the given Business Process.' };
@@ -60,14 +55,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2026-03-04 13:36:38</sys_created_on>
         <sys_id>518b4ea73b937a1062bf612c95e45ab9</sys_id>
-        <sys_mod_count>9</sys_mod_count>
+        <sys_mod_count>10</sys_mod_count>
         <sys_name>AiToolGetStakeholder</sys_name>
         <sys_package display_value="AgenticBusinessProcessConsultant WORK IN PROGRESS" source="x_snc_agenticbpc">672e2a382b0f36109083fe395e91bf3e</sys_package>
         <sys_policy/>
         <sys_scope display_value="AgenticBusinessProcessConsultant WORK IN PROGRESS">672e2a382b0f36109083fe395e91bf3e</sys_scope>
         <sys_update_name>sys_script_include_518b4ea73b937a1062bf612c95e45ab9</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-03-17 12:55:52</sys_updated_on>
+        <sys_updated_on>2026-04-01 07:45:19</sys_updated_on>
         <x_snc_devtools_sys_ui_script/>
     </sys_script_include>
 </record_update>
