@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="DELETE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_snc_agenticbpc.RenderDateTimeLocal</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description>Renders a date/time value as an local timezone adjusted ISO string.</description>
+        <mobile_callable>false</mobile_callable>
+        <name>RenderDateTimeLocal</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[function RenderDateTimeLocal(vDateTime)
+{
+	if (vDateTime === false || vDateTime == null || vDateTime == undefined)
+	{
+		return '';
+	}
+	
+	if (GetType(vDateTime) == 'number')
+	{
+		var nTimeStamp = GetIntegerValue(vDateTime); 
+		var date = new Date(0);
+		date.setTime(nTimeStamp);
+		
+		var strResult = date.getUTCFullYear();
+		strResult += '-'+StringPadStart(date.getUTCMonth()+1,2, '0');
+		strResult += '-'+StringPadStart(date.getUTCDate(),2, '0');
+		strResult += ' '+StringPadStart(date.getUTCHours(),2, '0');
+		strResult += ':'+StringPadStart(date.getUTCMinutes(),2, '0');
+		strResult += ':'+StringPadStart(date.getUTCSeconds(),2, '0');
+		
+		return strResult;
+	}
+	
+	strDateTime = GetStringValue(vDateTime);
+	
+	var nTimestamp = ParseDateTime(strDateTime);
+	if (nTimeStamp === false)
+	{
+		return '';
+	}
+	return RenderDateTimeLocal(nTimestamp);
+}]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-04-07 11:47:43</sys_created_on>
+        <sys_id>0b593ca22b0407949083fe395e91bf39</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>RenderDateTimeLocal</sys_name>
+        <sys_package display_value="AgenticBusinessProcessConsultant WORK IN PROGRESS" source="x_snc_agenticbpc">672e2a382b0f36109083fe395e91bf3e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AgenticBusinessProcessConsultant WORK IN PROGRESS">672e2a382b0f36109083fe395e91bf3e</sys_scope>
+        <sys_update_name>sys_script_include_0b593ca22b0407949083fe395e91bf39</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-04-07 11:47:43</sys_updated_on>
+        <x_snc_devtools_sys_ui_script/>
+    </sys_script_include>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="AgenticBusinessProcessConsultant WORK IN PROGRESS">672e2a382b0f36109083fe395e91bf3e</application>
+        <file_path/>
+        <instance_id>a8cbb5133b6b5e540fd412c5e4e45a1f</instance_id>
+        <instance_name>wildyokohama</instance_name>
+        <name>sys_script_include_0b593ca22b0407949083fe395e91bf39</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_script_include"&gt;&lt;sys_script_include action="INSERT_OR_UPDATE"&gt;&lt;access&gt;public&lt;/access&gt;&lt;active&gt;true&lt;/active&gt;&lt;api_name&gt;x_snc_agenticbpc.RenderDateTimeLocal&lt;/api_name&gt;&lt;caller_access/&gt;&lt;client_callable&gt;false&lt;/client_callable&gt;&lt;description&gt;Renders a date/time value as an local timezone adjusted ISO string.&lt;/description&gt;&lt;mobile_callable&gt;false&lt;/mobile_callable&gt;&lt;name&gt;RenderDateTimeLocal&lt;/name&gt;&lt;sandbox_callable&gt;false&lt;/sandbox_callable&gt;&lt;script&gt;&lt;![CDATA[function RenderDateTimeLocal(vDateTime)
+{
+	if (vDateTime === false || vDateTime == null || vDateTime == undefined)
+	{
+		return '';
+	}
+	
+	if (GetType(vDateTime) == 'number')
+	{
+		var nTimeStamp = GetIntegerValue(vDateTime); 
+		var date = new Date(0);
+		date.setTime(nTimeStamp);
+		
+		var strResult = date.getUTCFullYear();
+		strResult += '-'+StringPadStart(date.getUTCMonth()+1,2, '0');
+		strResult += '-'+StringPadStart(date.getUTCDate(),2, '0');
+		strResult += ' '+StringPadStart(date.getUTCHours(),2, '0');
+		strResult += ':'+StringPadStart(date.getUTCMinutes(),2, '0');
+		strResult += ':'+StringPadStart(date.getUTCSeconds(),2, '0');
+		
+		return strResult;
+	}
+	
+	strDateTime = GetStringValue(vDateTime);
+	
+	var nTimestamp = ParseDateTime(strDateTime);
+	if (nTimeStamp === false)
+	{
+		return '';
+	}
+	return RenderDateTimeLocal(nTimestamp);
+}]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_include&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-04-07 11:47:43&lt;/sys_created_on&gt;&lt;sys_id&gt;0b593ca22b0407949083fe395e91bf39&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;RenderDateTimeLocal&lt;/sys_name&gt;&lt;sys_package display_value="AgenticBusinessProcessConsultant WORK IN PROGRESS" source="x_snc_agenticbpc"&gt;672e2a382b0f36109083fe395e91bf3e&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="AgenticBusinessProcessConsultant WORK IN PROGRESS"&gt;672e2a382b0f36109083fe395e91bf3e&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_include_0b593ca22b0407949083fe395e91bf39&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-04-07 11:47:43&lt;/sys_updated_on&gt;&lt;x_snc_devtools_sys_ui_script/&gt;&lt;/sys_script_include&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>1000286161</payload_hash>
+        <record_name>RenderDateTimeLocal</record_name>
+        <reverted_from/>
+        <source>bd48d13f2ba3fe109083fe395e91bfaa</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-04-07 11:47:44</sys_created_on>
+        <sys_id>1359bc262b0407949083fe395e91bf98</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19d67c51e720000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-04-07 11:47:44</sys_updated_on>
+        <type>Script Include</type>
+        <update_guid>db59bc2634040794d89e7154c87de496</update_guid>
+        <update_guid_history>db59bc2634040794d89e7154c87de496:1000286161</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-04-07 11:48:15</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_include">sys_script_include</sys_db_object>
+        <sys_id>25233ad094424bf2a846a299afabf604</sys_id>
+        <sys_metadata>0b593ca22b0407949083fe395e91bf39</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>RenderDateTimeLocal</sys_name>
+        <sys_package display_value="AgenticBusinessProcessConsultant WORK IN PROGRESS" source="x_snc_agenticbpc">672e2a382b0f36109083fe395e91bf3e</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="AgenticBusinessProcessConsultant WORK IN PROGRESS">672e2a382b0f36109083fe395e91bf3e</sys_scope>
+        <sys_scope_delete display_value="">301d5b1fe789489f87b5e880a02cc671</sys_scope_delete>
+        <sys_update_name>sys_script_include_0b593ca22b0407949083fe395e91bf39</sys_update_name>
+        <sys_update_version display_value="sys_script_include_0b593ca22b0407949083fe395e91bf39">1359bc262b0407949083fe395e91bf98</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-04-07 11:48:15</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
