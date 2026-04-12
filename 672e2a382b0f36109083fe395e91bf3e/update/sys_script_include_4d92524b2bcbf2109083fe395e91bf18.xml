@@ -8,6 +8,9 @@
         <description>Provides client-callable functions to support the Agentic Business Process Consultant process. &#13;
 |&#13;
 Methods:&#13;
+* StartInterview()
+|
+Methods:
 * StartInterview()</description>
         <mobile_callable>false</mobile_callable>
         <name>AgenticBusinessProcessConsultantClientAPI</name>
@@ -17,9 +20,10 @@ AgenticBusinessProcessConsultantClientAPI.prototype = Object.extendsObject(globa
 {
 	StartInterview: function()
 	{
-		var GetStringValue = x_snc_devtools.GetStringValue;
+		var GetParam = x_snc_devtools.GetParam;
+		var IsValidSysId = x_snc_devtools.IsValidSysId;
 			
-		var strBusinessProcessSysId = GetStringValue(this.getParameter('sysparm_business_process_sys_id'));
+		var strBusinessProcessSysId = GetParam('business_process_sys_id',IsValidSysId);
 		var strUserSysId = gs.getUserID();
 
 		var strConversationId = StartInterview(strBusinessProcessSysId, strUserSysId);
@@ -33,14 +37,14 @@ AgenticBusinessProcessConsultantClientAPI.prototype = Object.extendsObject(globa
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2026-02-18 14:33:42</sys_created_on>
         <sys_id>4d92524b2bcbf2109083fe395e91bf18</sys_id>
-        <sys_mod_count>12</sys_mod_count>
+        <sys_mod_count>13</sys_mod_count>
         <sys_name>AgenticBusinessProcessConsultantClientAPI</sys_name>
         <sys_package display_value="AgenticBusinessProcessConsultant WORK IN PROGRESS" source="x_snc_agenticbpc">672e2a382b0f36109083fe395e91bf3e</sys_package>
         <sys_policy/>
         <sys_scope display_value="AgenticBusinessProcessConsultant WORK IN PROGRESS">672e2a382b0f36109083fe395e91bf3e</sys_scope>
         <sys_update_name>sys_script_include_4d92524b2bcbf2109083fe395e91bf18</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-03-17 12:55:52</sys_updated_on>
+        <sys_updated_on>2026-04-12 08:29:44</sys_updated_on>
         <x_snc_devtools_sys_ui_script/>
     </sys_script_include>
 </record_update>
