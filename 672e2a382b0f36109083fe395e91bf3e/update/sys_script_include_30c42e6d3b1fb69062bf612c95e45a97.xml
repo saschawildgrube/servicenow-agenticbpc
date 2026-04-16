@@ -35,12 +35,26 @@
 	strHtml += '<h1>' + grBusinessProcess.name + '</h1>';
 	strHtml += '<p>' + grBusinessProcess.number + '</p>';
 
+	var business_process = ParseJson(grBusinessProcess.json);
+
+	if (x_snc_devtools.IsObject(business_process) == false)
+	//if (BusinessProcessValidate(business_process,false) == false)
+	{
+		strHtml += HtmlRenderWarning('No details have been defined for the business process!');
+		return strHtml;
+	}
+
+
 	var strDescription = GetStringValue(grBusinessProcess.summary);
 	if (strDescription == '')
 	{
 		strDescription = GetStringValue(grBusinessProcess.description);
 	}
-
+	if (strDescription == '')
+	{
+		strDescription = GetStringValue(business_process.description);
+	}
+	
 	if (strDescription == '')
 	{
 		strHtml += HtmlRenderWarning('The business process does not (yet) have a description!');
@@ -50,26 +64,18 @@
 		strHtml += '<p>' + strDescription + '</p>';
 	}
 
-	var details = ParseJson(grBusinessProcess.json);
-
-	if (x_snc_devtools.IsObject(details) == false)
-	//if (BusinessProcessValidate(details,false) == false)
-	{
-		strHtml += HtmlRenderWarning('No details have been defined for the business process!');
-		return strHtml;
-	}
 
 	strHtml += HtmlRenderTableOfContents();
 
 
-	var strOutput = GetStringValue(GetValue(details,'output'));
+	var strOutput = GetStringValue(GetValue(business_process,'output'));
 	if (strOutput != '')
 	{
 		strHtml += '<h2>Output</h2>';
 		strHtml += '<p>' + HtmlEncode(strOutput) + '</p>';
 	}
 
-	var strInput = GetStringValue(GetValue(details,'input'));
+	var strInput = GetStringValue(GetValue(business_process,'input'));
 	if (strInput != '')
 	{
 		strHtml += '<h2>Input</h2>';
@@ -78,7 +84,7 @@
 
 	strHtml += '<h2>Roles</h2>';
 
-	var aRoles = GetArrayValue(GetValue(details,'_roles'));
+	var aRoles = GetArrayValue(GetValue(business_process,'_roles'));
 
 	if (aRoles.length == 0)
 	{
@@ -99,8 +105,8 @@
 
 	strHtml += '<h2>States</h2>';
 
-	var aStates = GetArrayValue(GetValue(details,'_states'));
-	var aTransitions = GetArrayValue(GetValue(details,'_transitions'));
+	var aStates = GetArrayValue(GetValue(business_process,'_states'));
+	var aTransitions = GetArrayValue(GetValue(business_process,'_transitions'));
 
 	if (aStates.length == 0)
 	{
@@ -133,7 +139,7 @@
 						var strTargetStateId = GetStringValue(GetValue(transition,'target_state'));
 						if (strTargetStateId != '')
 						{
-							var target_state = ArrayGetElementById(GetValue(details,'_states'),strTargetStateId);
+							var target_state = ArrayGetElementById(GetValue(business_process,'_states'),strTargetStateId);
 							if (IsObject(target_state) == true)
 							{
 								if (strHtmlTransitions != '')
@@ -166,14 +172,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2026-02-26 10:21:44</sys_created_on>
         <sys_id>30c42e6d3b1fb69062bf612c95e45a97</sys_id>
-        <sys_mod_count>16</sys_mod_count>
+        <sys_mod_count>17</sys_mod_count>
         <sys_name>HtmlRenderBusinessProcess</sys_name>
         <sys_package display_value="AgenticBusinessProcessConsultant WORK IN PROGRESS" source="x_snc_agenticbpc">672e2a382b0f36109083fe395e91bf3e</sys_package>
         <sys_policy/>
         <sys_scope display_value="AgenticBusinessProcessConsultant WORK IN PROGRESS">672e2a382b0f36109083fe395e91bf3e</sys_scope>
         <sys_update_name>sys_script_include_30c42e6d3b1fb69062bf612c95e45a97</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-03-27 08:23:21</sys_updated_on>
+        <sys_updated_on>2026-04-16 11:33:36</sys_updated_on>
         <x_snc_devtools_sys_ui_script/>
     </sys_script_include>
 </record_update>
