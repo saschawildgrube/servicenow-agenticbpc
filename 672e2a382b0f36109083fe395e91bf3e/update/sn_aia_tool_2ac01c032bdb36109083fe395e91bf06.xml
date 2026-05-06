@@ -2,7 +2,7 @@
     <sn_aia_tool action="INSERT_OR_UPDATE">
         <active>true</active>
         <description>Update information about the stakeholder that is being interviewed.</description>
-        <input_schema>[{"name":"business_process","value":"","description":"The Business Process name, number or Sys Id.","mandatory":false},{"name":"notes","value":"","description":"Notes about the stakeholder.","mandatory":false,}]</input_schema>
+        <input_schema>[{"name":"business_process","value":"","description":"The Business Process name, number or Sys Id.","mandatory":false},{"name":"notes","value":"","description":"Notes about the stakeholder.","mandatory":false}]</input_schema>
         <name>Update Stakeholder</name>
         <record_type>custom</record_type>
         <script><![CDATA[(function(inputs) {
@@ -15,7 +15,7 @@
         <sys_created_on>2026-03-02 15:20:19</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_id>2ac01c032bdb36109083fe395e91bf06</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_name>Update Stakeholder</sys_name>
         <sys_overrides/>
         <sys_package display_value="AgenticBusinessProcessConsultant WORK IN PROGRESS" source="x_snc_agenticbpc">672e2a382b0f36109083fe395e91bf3e</sys_package>
@@ -23,7 +23,7 @@
         <sys_scope display_value="AgenticBusinessProcessConsultant WORK IN PROGRESS">672e2a382b0f36109083fe395e91bf3e</sys_scope>
         <sys_update_name>sn_aia_tool_2ac01c032bdb36109083fe395e91bf06</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-03-04 17:26:39</sys_updated_on>
+        <sys_updated_on>2026-05-05 07:20:42</sys_updated_on>
         <target_document/>
         <target_document_table>sn_aia_tool</target_document_table>
         <type>script</type>
