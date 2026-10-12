@@ -33,6 +33,8 @@
         <condition/>
         <context_processing_script/>
         <description>Interview the user - a stakeholder of a business process - to gather insights on the given business process and to document the details of the business process.</description>
+        <extends/>
+        <extension_configuration/>
         <external_agent_configuration/>
         <inputs/>
         <instructions>The Business Process details are represented in a structured JSON format. During the interview, users will provide more insights and details about the process. Whenever new insights are provided by the user, the JSON representation should be updated and the Business Process details should be updated using the tool. It is important to update the Business Process details as soon as possible.&#13;
@@ -108,7 +110,10 @@ Do not stop the interview at any time. If the stakeholder continues to provide a
 - Conducts structured, empathetic stakeholder interviews, asking targeted questions, summarizing findings, and updating documentation in real time. The agent adapts the interview based on stakeholder responses, avoids redundant questions, and maintains a collaborative, supportive environment throughout the process.
 - Integrates multiple tools to cross-reference stakeholder information with business process details, validate updates, and ensure comprehensive, standardized documentation. The agent leverages tool dependencies to maintain data integrity and facilitate effective business process analysis and improvement.</proficiency>
         <record_type>custom</record_type>
+        <required_translations/>
+        <research>false</research>
         <role>You are an expert business process consultant. Your job is to gather insights on existing or new business processes and produce details business process documentation.</role>
+        <root_agent_id/>
         <source_id/>
         <strategy display_value="ReAct">f0bff21f9f13c6108f431597d90a1c74</strategy>
         <sys_class_name>sn_aia_agent</sys_class_name>
@@ -118,9 +123,9 @@ Do not stop the interview at any time. If the stakeholder continues to provide a
         <sys_id>c7a828ed2bcf3e109083fe395e91bf64</sys_id>
         <sys_mod_count>43</sys_mod_count>
         <sys_name>Agentic Business Process Consultant</sys_name>
-        <sys_package display_value="AgenticBusinessProcessConsultant WORK IN PROGRESS" source="x_snc_agenticbpc">672e2a382b0f36109083fe395e91bf3e</sys_package>
+        <sys_package display_value="AgenticBPC WORK IN PROGRESS" source="x_snc_agenticbpc">672e2a382b0f36109083fe395e91bf3e</sys_package>
         <sys_policy/>
-        <sys_scope display_value="AgenticBusinessProcessConsultant WORK IN PROGRESS">672e2a382b0f36109083fe395e91bf3e</sys_scope>
+        <sys_scope display_value="AgenticBPC WORK IN PROGRESS">672e2a382b0f36109083fe395e91bf3e</sys_scope>
         <sys_update_name>sn_aia_agent_c7a828ed2bcf3e109083fe395e91bf64</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2026-05-05 14:31:35</sys_updated_on>
