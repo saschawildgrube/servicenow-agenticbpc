@@ -24,7 +24,7 @@
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2026-02-12 13:11:01</sys_updated_on>
         <table/>
-        <test display_value="AgenticBusinessProcessConsultant - Implementation">57cf2e3c2b0f36109083fe395e91bff0</test>
+        <test display_value="AgenticBPC - Implementation">57cf2e3c2b0f36109083fe395e91bff0</test>
         <timeout/>
         <warning_message/>
     </sys_atf_step>

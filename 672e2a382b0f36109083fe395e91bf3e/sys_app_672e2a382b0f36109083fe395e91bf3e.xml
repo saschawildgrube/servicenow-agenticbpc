@@ -23,6 +23,7 @@
         <scope>x_snc_agenticbpc</scope>
         <scoped_administration>false</scoped_administration>
         <short_description>The Agentic Business Process Consultant AI Agent creates structured process descriptions that can serve as the foundation of a backlog or even direct automatic process implementations.</short_description>
+        <sn_managed>false</sn_managed>
         <source>x_snc_agenticbpc</source>
         <store_correlation_id/>
         <store_url/>

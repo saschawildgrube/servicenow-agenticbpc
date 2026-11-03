@@ -23,7 +23,7 @@
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2026-02-13 15:53:33</sys_updated_on>
         <table/>
-        <test display_value="AgenticBusinessProcessConsultant - GetBusinessProcessRecord">ef94bce92b437e109083fe395e91bf04</test>
+        <test display_value="AgenticBPC - GetBusinessProcessRecord">ef94bce92b437e109083fe395e91bf04</test>
         <timeout/>
         <warning_message/>
     </sys_atf_step>

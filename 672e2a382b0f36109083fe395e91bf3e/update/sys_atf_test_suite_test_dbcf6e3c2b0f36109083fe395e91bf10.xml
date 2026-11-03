@@ -14,7 +14,7 @@
         <sys_update_name>sys_atf_test_suite_test_dbcf6e3c2b0f36109083fe395e91bf10</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2026-02-11 16:53:02</sys_updated_on>
-        <test display_value="AgenticBusinessProcessConsultant - Implementation">57cf2e3c2b0f36109083fe395e91bff0</test>
+        <test display_value="AgenticBPC - Implementation">57cf2e3c2b0f36109083fe395e91bff0</test>
         <test_suite display_value="AgenticBPC">c7cf2e3c2b0f36109083fe395e91bf79</test_suite>
     </sys_atf_test_suite_test>
 </record_update>
