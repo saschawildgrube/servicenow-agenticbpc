@@ -31,16 +31,24 @@
         <onclick/>
         <order>100</order>
         <script><![CDATA[
-var strMessage = GenerateStakeholderInvitation(current);
-if (strMessage != false)
+if (GenerateAndSendStakeholderInvitation(current) == true)
 {
 	gs.addInfoMessage(
-		x_snc_devtools.HtmlEncode(
-			'Pleaae share this message with the stakeholder:\n\n'+strMessage));
+		'An invitation has been sent to the stakeholder.');
 }
 else
 {
-	gs.addErrorMessage('An error occured. The invitation message could not be created.');
+	var strMessage = GenerateStakeholderInvitation(current);
+	if (strMessage != false)
+	{
+		gs.addInfoMessage(
+			x_snc_devtools.HtmlEncode(
+				'Please share this message with the stakeholder:\n\n'+strMessage));
+	}
+	else
+	{
+		gs.addErrorMessage('An error occured. The invitation message could not be created. Make sure a consultant is selected.');
+	}
 }
 
 x_snc_devtools.RedirectToRecord(current);]]></script>
@@ -54,7 +62,7 @@ x_snc_devtools.RedirectToRecord(current);]]></script>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>58c6268e83d0db50ac13b410feaad3c6</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name>Invite Stakeholder</sys_name>
         <sys_overrides/>
         <sys_package display_value="AgenticBPC WORK IN PROGRESS" source="x_snc_agenticbpc">672e2a382b0f36109083fe395e91bf3e</sys_package>
@@ -62,7 +70,7 @@ x_snc_devtools.RedirectToRecord(current);]]></script>
         <sys_scope display_value="AgenticBPC WORK IN PROGRESS">672e2a382b0f36109083fe395e91bf3e</sys_scope>
         <sys_update_name>sys_ui_action_58c6268e83d0db50ac13b410feaad3c6</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-11-03 15:11:00</sys_updated_on>
+        <sys_updated_on>2026-11-03 16:37:09</sys_updated_on>
         <table>x_snc_agenticbpc_stakeholder</table>
         <ui11_compatible>true</ui11_compatible>
         <ui16_compatible>false</ui16_compatible>

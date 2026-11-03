@@ -28,24 +28,34 @@
 	{
 		return false;
 	}
+	var strStakeholderName = grUser.getDisplayValue();
 
 	var grProcess = GetBusinessProcessRecord(grStakeholder.business_process);
 	if (IsValidRecord(grProcess) == false)
 	{
 		return false;
-	}	
+	}
+	var strProcessName = GetStringValue(grProcess.name);
+
+	var grConsultant = GetUserRecord(grProcess.consultant);
+	if (IsValidRecord(grConsultant) == false)
+	{
+		return false;
+	}
+	var strConsultantName = grConsultant.getDisplayValue()
+
 
 	var strUrl = GetInstanceRecordUrl('x_snc_agenticbpc_business_process',grProcess.sys_id);
-	var strProcessName = GetStringValue(grProcess.name);
 		
 	var strMessage = 'Hello ';
-		strMessage += grUser.first_name + ' ';
-		strMessage += grUser.last_name + ',\n\n';
-		strMessage += 'We kindly ask you to participate in an AI augmented interview regarding process "'+strProcessName+'".\n\n';
+		strMessage += strStakeholderName + ',\n\n';
+		strMessage += 'I kindly ask you to participate in an AI augmented interview regarding business process "'+strProcessName+'".\n\n';
 		strMessage += 'Please navigate to:\n';
-		strMessage += strUrl + '\n';
-		strMessage += 'Click on "Start Interview" to start the interview!\n\n';
-		strMessage += 'We appreciate your cooperation.!\n';
+		strMessage += strUrl + '\n\n';
+		strMessage += 'Then click on "Start Interview" to start the interview!\n\n';
+		strMessage += 'I appreciate your support!\n\n';
+		strMessage += 'Kind regards,\n\n';
+		strMessage += strConsultantName + '\n\n';
 
 	
 	return strMessage;
@@ -54,14 +64,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2026-11-03 13:19:02</sys_created_on>
         <sys_id>749b2e8e8314db50ac13b410feaad348</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>9</sys_mod_count>
         <sys_name>GenerateStakeholderInvitation</sys_name>
         <sys_package display_value="AgenticBPC WORK IN PROGRESS" source="x_snc_agenticbpc">672e2a382b0f36109083fe395e91bf3e</sys_package>
         <sys_policy/>
         <sys_scope display_value="AgenticBPC WORK IN PROGRESS">672e2a382b0f36109083fe395e91bf3e</sys_scope>
         <sys_update_name>sys_script_include_749b2e8e8314db50ac13b410feaad348</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-11-03 15:31:08</sys_updated_on>
+        <sys_updated_on>2026-11-03 16:24:27</sys_updated_on>
         <x_snc_devtools_sys_ui_script/>
     </sys_script_include>
 </record_update>
