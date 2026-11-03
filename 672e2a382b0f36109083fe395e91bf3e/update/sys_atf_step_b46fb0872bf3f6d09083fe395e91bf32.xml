@@ -23,7 +23,7 @@
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2026-03-27 15:19:34</sys_updated_on>
         <table/>
-        <test display_value="AgenticBusinessProcessConsultant - AiToolValidateBusinessProcess">646fb0872bf3f6d09083fe395e91bf0f</test>
+        <test display_value="AgenticBPC - AiToolValidateBusinessProcess">646fb0872bf3f6d09083fe395e91bf0f</test>
         <timeout/>
         <warning_message/>
     </sys_atf_step>
@@ -34,11 +34,11 @@
         <order>100</order>
         <sys_class_name>sys_variable_value</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2026-03-27 15:15:19</sys_created_on>
+        <sys_created_on>2026-11-03 08:28:09</sys_created_on>
         <sys_id>7c6fb0872bf3f6d09083fe395e91bf4d</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-03-27 15:15:19</sys_updated_on>
+        <sys_updated_on>2026-11-03 08:28:09</sys_updated_on>
         <value>3.1</value>
         <variable display_value="Jasmine version">42f2564b73031300440211d8faf6a777</variable>
     </sys_variable_value>
@@ -48,41 +48,41 @@
         <order>200</order>
         <sys_class_name>sys_variable_value</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2026-03-27 15:15:19</sys_created_on>
+        <sys_created_on>2026-11-03 08:28:09</sys_created_on>
         <sys_id>fc6fb0872bf3f6d09083fe395e91bf4e</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-03-27 15:19:34</sys_updated_on>
-        <value>(function(outputs, steps, stepResult, assertEqual)&#13;
-{&#13;
-	var test = new x_snc_devtools.TestAPI(outputs, steps, stepResult, assertEqual);&#13;
-	&#13;
-	test.SetResult(true);&#13;
-	&#13;
-	function TestCase_AiToolValidateBusinessProcess(strDetails,vExpected)&#13;
-	{&#13;
-		function TestCase_AiToolValidateBusinessProcess_CheckResult(vInput,vExpected,vResult)&#13;
-		{&#13;
-			return true;&#13;
-		}&#13;
-		&#13;
-		test.TestCase(&#13;
-			'Function AiToolValidateBusinessProcess()',&#13;
-			AiToolValidateBusinessProcess,&#13;
-			{&#13;
-				'strDetails': strDetails&#13;
-			},&#13;
-			vExpected,&#13;
-			TestCase_AiToolValidateBusinessProcess_CheckResult);&#13;
-	}&#13;
-		&#13;
-	TestCase_AiToolValidateBusinessProcess(null);&#13;
-	TestCase_AiToolValidateBusinessProcess('Hello World');&#13;
-	TestCase_AiToolValidateBusinessProcess(x_snc_devtools.MakeJson(x_snc_devtools.BusinessProcessGetExample()));&#13;
-&#13;
-&#13;
-	return test.GetResult();&#13;
-	&#13;
+        <sys_updated_on>2026-11-03 08:28:09</sys_updated_on>
+        <value>(function(outputs, steps, stepResult, assertEqual)
+{
+	var test = new x_snc_devtools.TestAPI(outputs, steps, stepResult, assertEqual);
+	
+	test.SetResult(true);
+	
+	function TestCase_AiToolValidateBusinessProcess(strDetails,vExpected)
+	{
+		function TestCase_AiToolValidateBusinessProcess_CheckResult(vInput,vExpected,vResult)
+		{
+			return true;
+		}
+		
+		test.TestCase(
+			'Function AiToolValidateBusinessProcess()',
+			AiToolValidateBusinessProcess,
+			{
+				'strDetails': strDetails
+			},
+			vExpected,
+			TestCase_AiToolValidateBusinessProcess_CheckResult);
+	}
+		
+	TestCase_AiToolValidateBusinessProcess(null);
+	TestCase_AiToolValidateBusinessProcess('Hello World');
+	TestCase_AiToolValidateBusinessProcess(x_snc_devtools.MakeJson(x_snc_devtools.BusinessProcessGetExample()));
+
+
+	return test.GetResult();
+	
 })(outputs, steps, stepResult, assertEqual);</value>
         <variable display_value="Test script">989d9e235324220002c6435723dc3484</variable>
     </sys_variable_value>

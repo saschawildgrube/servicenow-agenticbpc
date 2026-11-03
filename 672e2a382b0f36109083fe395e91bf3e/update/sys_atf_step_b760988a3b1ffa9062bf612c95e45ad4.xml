@@ -23,7 +23,7 @@
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2026-02-27 12:44:51</sys_updated_on>
         <table/>
-        <test display_value="AgenticBusinessProcessConsultant - IsUserStakeholderOfBusinessProcess">3760588a3b1ffa9062bf612c95e45af4</test>
+        <test display_value="AgenticBPC - IsUserStakeholderOfBusinessProcess">3760588a3b1ffa9062bf612c95e45af4</test>
         <timeout/>
         <warning_message/>
     </sys_atf_step>
@@ -34,11 +34,11 @@
         <order>200</order>
         <sys_class_name>sys_variable_value</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2026-02-27 12:44:51</sys_created_on>
+        <sys_created_on>2026-11-03 08:28:09</sys_created_on>
         <sys_id>0870988a3b1ffa9062bf612c95e45af4</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-02-27 12:44:51</sys_updated_on>
+        <sys_updated_on>2026-11-03 08:28:09</sys_updated_on>
         <value>(function(outputs, steps, stepResult, assertEqual)
 {
 	var test = new x_snc_devtools.TestAPI(outputs, steps, stepResult, assertEqual);
@@ -76,11 +76,11 @@
         <order>100</order>
         <sys_class_name>sys_variable_value</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2026-02-27 12:44:51</sys_created_on>
+        <sys_created_on>2026-11-03 08:28:09</sys_created_on>
         <sys_id>8470988a3b1ffa9062bf612c95e45ada</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-02-27 12:44:51</sys_updated_on>
+        <sys_updated_on>2026-11-03 08:28:09</sys_updated_on>
         <value>3.1</value>
         <variable display_value="Jasmine version">42f2564b73031300440211d8faf6a777</variable>
     </sys_variable_value>

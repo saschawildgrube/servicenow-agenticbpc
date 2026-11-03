@@ -23,7 +23,7 @@
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2026-05-21 13:29:03</sys_updated_on>
         <table/>
-        <test display_value="AgenticBusinessProcessConsultant - StartInterview">07e8c5ec2b884b149083fe395e91bf98</test>
+        <test display_value="AgenticBPC - StartInterview">07e8c5ec2b884b149083fe395e91bf98</test>
         <timeout/>
         <warning_message/>
     </sys_atf_step>
@@ -34,65 +34,65 @@
         <order>200</order>
         <sys_class_name>sys_variable_value</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2026-04-01 07:47:52</sys_created_on>
+        <sys_created_on>2026-11-03 08:28:09</sys_created_on>
         <sys_id>5be849ec2b884b149083fe395e91bf76</sys_id>
-        <sys_mod_count>9</sys_mod_count>
+        <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-05-21 13:29:03</sys_updated_on>
-        <value>(function(outputs, steps, stepResult, assertEqual)&#13;
-{&#13;
-	var test = new x_snc_devtools.TestAPI(outputs, steps, stepResult, assertEqual);&#13;
-	&#13;
-	test.SetResult(true);&#13;
-	&#13;
-	function TestCase_StartInterview(vBusinessProcess,vUser,vExpected)&#13;
-	{&#13;
-		function TestCase_StartInterview_CheckResult(vInput,vExpected,vResult)&#13;
-		{&#13;
-			if (vExpected == false)&#13;
-			{&#13;
-				return (vExpected == vResult);&#13;
-			}&#13;
-			return x_snc_devtools.IsValidSysId(vResult);&#13;
-		}&#13;
-		&#13;
-		test.TestCase(&#13;
-			'Function StartInterview()',&#13;
-			StartInterview,&#13;
-			{&#13;
-				'vBusinessProcess': vBusinessProcess,&#13;
-				'vUser': vUser&#13;
-			},&#13;
-			vExpected,&#13;
-			TestCase_StartInterview_CheckResult);&#13;
-	}&#13;
-		&#13;
-	TestCase_StartInterview(null,null,false);&#13;
-&#13;
-	var grBP = new GlideRecord('x_snc_agenticbpc_business_process');&#13;
-	grBP.initialize();&#13;
-	grBP.name = 'TEST1';&#13;
-	var strBusinessProcessSysId = grBP.insert();&#13;
-&#13;
-	TestCase_StartInterview(strBusinessProcessSysId,null,false);&#13;
-&#13;
-	var strUserSysId = x_snc_devtools.CreateTestUser('ATF Agentic BPC Stakeholder 1');&#13;
-&#13;
-	var grStakeholder = new GlideRecord('x_snc_agenticbpc_stakeholder');&#13;
-	grStakeholder.initialize();&#13;
-	grStakeholder.user = strUserSysId;&#13;
-	grStakeholder.business_process = strBusinessProcessSysId;&#13;
-	var strStakeholderSysId = grStakeholder.insert();&#13;
-&#13;
-	TestCase_StartInterview(strBusinessProcessSysId,strUserSysId,false);&#13;
-&#13;
-	x_snc_devtools.UserAddRole(strUserSysId,'x_snc_agenticbpc.stakeholder');&#13;
-&#13;
-	TestCase_StartInterview(strBusinessProcessSysId,strUserSysId,true);&#13;
-&#13;
-	&#13;
-	return test.GetResult();&#13;
-	&#13;
+        <sys_updated_on>2026-11-03 08:28:09</sys_updated_on>
+        <value>(function(outputs, steps, stepResult, assertEqual)
+{
+	var test = new x_snc_devtools.TestAPI(outputs, steps, stepResult, assertEqual);
+	
+	test.SetResult(true);
+	
+	function TestCase_StartInterview(vBusinessProcess,vUser,vExpected)
+	{
+		function TestCase_StartInterview_CheckResult(vInput,vExpected,vResult)
+		{
+			if (vExpected == false)
+			{
+				return (vExpected == vResult);
+			}
+			return x_snc_devtools.IsValidSysId(vResult);
+		}
+		
+		test.TestCase(
+			'Function StartInterview()',
+			StartInterview,
+			{
+				'vBusinessProcess': vBusinessProcess,
+				'vUser': vUser
+			},
+			vExpected,
+			TestCase_StartInterview_CheckResult);
+	}
+		
+	TestCase_StartInterview(null,null,false);
+
+	var grBP = new GlideRecord('x_snc_agenticbpc_business_process');
+	grBP.initialize();
+	grBP.name = 'TEST1';
+	var strBusinessProcessSysId = grBP.insert();
+
+	TestCase_StartInterview(strBusinessProcessSysId,null,false);
+
+	var strUserSysId = x_snc_devtools.CreateTestUser('ATF Agentic BPC Stakeholder 1');
+
+	var grStakeholder = new GlideRecord('x_snc_agenticbpc_stakeholder');
+	grStakeholder.initialize();
+	grStakeholder.user = strUserSysId;
+	grStakeholder.business_process = strBusinessProcessSysId;
+	var strStakeholderSysId = grStakeholder.insert();
+
+	TestCase_StartInterview(strBusinessProcessSysId,strUserSysId,false);
+
+	x_snc_devtools.UserAddRole(strUserSysId,'x_snc_agenticbpc.stakeholder');
+
+	TestCase_StartInterview(strBusinessProcessSysId,strUserSysId,true);
+
+	
+	return test.GetResult();
+	
 })(outputs, steps, stepResult, assertEqual);</value>
         <variable display_value="Test script">989d9e235324220002c6435723dc3484</variable>
     </sys_variable_value>
@@ -102,11 +102,11 @@
         <order>100</order>
         <sys_class_name>sys_variable_value</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2026-04-01 07:47:52</sys_created_on>
+        <sys_created_on>2026-11-03 08:28:09</sys_created_on>
         <sys_id>8fe849ec2b884b149083fe395e91bf68</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-04-01 07:47:52</sys_updated_on>
+        <sys_updated_on>2026-11-03 08:28:09</sys_updated_on>
         <value>3.1</value>
         <variable display_value="Jasmine version">42f2564b73031300440211d8faf6a777</variable>
     </sys_variable_value>

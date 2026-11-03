@@ -23,7 +23,7 @@
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2026-03-04 14:34:58</sys_updated_on>
         <table/>
-        <test display_value="AgenticBusinessProcessConsultant - AiToolGetStakeholder">c8b2deef3bd37a1062bf612c95e45a1f</test>
+        <test display_value="AgenticBPC - AiToolGetStakeholder">c8b2deef3bd37a1062bf612c95e45a1f</test>
         <timeout/>
         <warning_message/>
     </sys_atf_step>
@@ -34,11 +34,11 @@
         <order>100</order>
         <sys_class_name>sys_variable_value</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2026-03-04 14:04:50</sys_created_on>
+        <sys_created_on>2026-11-03 08:28:08</sys_created_on>
         <sys_id>4cb292233b177a1062bf612c95e45a60</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-03-04 14:04:50</sys_updated_on>
+        <sys_updated_on>2026-11-03 08:28:08</sys_updated_on>
         <value>3.1</value>
         <variable display_value="Jasmine version">42f2564b73031300440211d8faf6a777</variable>
     </sys_variable_value>
@@ -48,85 +48,85 @@
         <order>200</order>
         <sys_class_name>sys_variable_value</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2026-03-04 14:04:50</sys_created_on>
+        <sys_created_on>2026-11-03 08:28:08</sys_created_on>
         <sys_id>8cb292233b177a1062bf612c95e45a61</sys_id>
-        <sys_mod_count>9</sys_mod_count>
+        <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-03-04 14:34:58</sys_updated_on>
-        <value>(function(outputs, steps, stepResult, assertEqual)&#13;
-{&#13;
-	var test = new x_snc_devtools.TestAPI(outputs, steps, stepResult, assertEqual);&#13;
-	&#13;
-	test.SetResult(true);&#13;
-	&#13;
-	function TestCase_AiToolGetStakeholder(vBusinessProcess,vUser,vExpected)&#13;
-	{&#13;
-		function TestCase_AiToolGetStakeholder_CheckResult(vInput,vExpected,vResult)&#13;
-		{&#13;
-			if (vExpected == false)&#13;
-			{&#13;
-				if (x_snc_devtools.GetValue(vResult,'message') == 'The Business Process could not be found.')&#13;
-				{&#13;
-					return true;&#13;
-				}&#13;
-				if (x_snc_devtools.GetValue(vResult,'message') == 'Could not load the user record.')&#13;
-				{&#13;
-					return true;&#13;
-				}&#13;
-				if (x_snc_devtools.GetValue(vResult,'message') == 'The user is not a stakeholder of the given Business Process.')&#13;
-				{&#13;
-					return true;&#13;
-				}&#13;
-				return false;&#13;
-			}&#13;
-			if (x_snc_devtools.IsObject(vResult) == false)&#13;
-			{&#13;
-				return false;&#13;
-			}&#13;
-			if (x_snc_devtools.GetStringValue(x_snc_devtools.GetValue(vResult,'message')) != '')&#13;
-			{&#13;
-				return false;&#13;
-			}			&#13;
-			if (x_snc_devtools.GetStringValue(x_snc_devtools.GetValue(vResult,'name')) == '')&#13;
-			{&#13;
-				return false;&#13;
-			}&#13;
-			return true;&#13;
-		}&#13;
-		&#13;
-		test.TestCase(&#13;
-			'Function AiToolGetStakeholder()',&#13;
-			AiToolGetStakeholder,&#13;
-			{&#13;
-				'vBusinessProcess': vBusinessProcess,&#13;
-				'vUser': vUser&#13;
-			},&#13;
-			vExpected,&#13;
-			TestCase_AiToolGetStakeholder_CheckResult);&#13;
-	}&#13;
-		&#13;
-	TestCase_AiToolGetStakeholder(null,null,false);&#13;
-&#13;
-&#13;
-	var grBusinessProcess = new GlideRecord('x_Snc_agenticbpc_business_process');&#13;
-	grBusinessProcess.initialize();&#13;
-	grBusinessProcess.name = 'ATF Business Process 1';&#13;
-	var strBusinessProcessSysId = grBusinessProcess.insert();&#13;
-&#13;
-	var strUserSysId = x_snc_devtools.CreateTestUser('ATF Agentic BPC 1');&#13;
-&#13;
-	var grStakeholder = new GlideRecord('x_snc_agenticbpc_stakeholder');&#13;
-	grStakeholder.initialize();&#13;
-	grStakeholder.user = strUserSysId;&#13;
-	grStakeholder.business_process = strBusinessProcessSysId;&#13;
-	var strStakeholderSysId = grStakeholder.insert();&#13;
-&#13;
-	TestCase_AiToolGetStakeholder(strBusinessProcessSysId,strUserSysId,true);&#13;
-&#13;
-	TestCase_AiToolGetStakeholder(grBusinessProcess.number,strUserSysId,true);&#13;
-	&#13;
-	return test.GetResult();&#13;
-	&#13;
+        <sys_updated_on>2026-11-03 08:28:08</sys_updated_on>
+        <value>(function(outputs, steps, stepResult, assertEqual)
+{
+	var test = new x_snc_devtools.TestAPI(outputs, steps, stepResult, assertEqual);
+	
+	test.SetResult(true);
+	
+	function TestCase_AiToolGetStakeholder(vBusinessProcess,vUser,vExpected)
+	{
+		function TestCase_AiToolGetStakeholder_CheckResult(vInput,vExpected,vResult)
+		{
+			if (vExpected == false)
+			{
+				if (x_snc_devtools.GetValue(vResult,'message') == 'The Business Process could not be found.')
+				{
+					return true;
+				}
+				if (x_snc_devtools.GetValue(vResult,'message') == 'Could not load the user record.')
+				{
+					return true;
+				}
+				if (x_snc_devtools.GetValue(vResult,'message') == 'The user is not a stakeholder of the given Business Process.')
+				{
+					return true;
+				}
+				return false;
+			}
+			if (x_snc_devtools.IsObject(vResult) == false)
+			{
+				return false;
+			}
+			if (x_snc_devtools.GetStringValue(x_snc_devtools.GetValue(vResult,'message')) != '')
+			{
+				return false;
+			}			
+			if (x_snc_devtools.GetStringValue(x_snc_devtools.GetValue(vResult,'name')) == '')
+			{
+				return false;
+			}
+			return true;
+		}
+		
+		test.TestCase(
+			'Function AiToolGetStakeholder()',
+			AiToolGetStakeholder,
+			{
+				'vBusinessProcess': vBusinessProcess,
+				'vUser': vUser
+			},
+			vExpected,
+			TestCase_AiToolGetStakeholder_CheckResult);
+	}
+		
+	TestCase_AiToolGetStakeholder(null,null,false);
+
+
+	var grBusinessProcess = new GlideRecord('x_Snc_agenticbpc_business_process');
+	grBusinessProcess.initialize();
+	grBusinessProcess.name = 'ATF Business Process 1';
+	var strBusinessProcessSysId = grBusinessProcess.insert();
+
+	var strUserSysId = x_snc_devtools.CreateTestUser('ATF Agentic BPC 1');
+
+	var grStakeholder = new GlideRecord('x_snc_agenticbpc_stakeholder');
+	grStakeholder.initialize();
+	grStakeholder.user = strUserSysId;
+	grStakeholder.business_process = strBusinessProcessSysId;
+	var strStakeholderSysId = grStakeholder.insert();
+
+	TestCase_AiToolGetStakeholder(strBusinessProcessSysId,strUserSysId,true);
+
+	TestCase_AiToolGetStakeholder(grBusinessProcess.number,strUserSysId,true);
+	
+	return test.GetResult();
+	
 })(outputs, steps, stepResult, assertEqual);</value>
         <variable display_value="Test script">989d9e235324220002c6435723dc3484</variable>
     </sys_variable_value>

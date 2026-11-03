@@ -5,7 +5,7 @@
         <description/>
         <enable_parameterized_testing>false</enable_parameterized_testing>
         <fail_on_server_error>false</fail_on_server_error>
-        <name>AgenticBusinessProcessConsultant - AiToolUpdateBusinessProcess</name>
+        <name>AgenticBPC - AiToolUpdateBusinessProcess</name>
         <parameters/>
         <remember/>
         <sn_atf_tg_generated>false</sn_atf_tg_generated>
