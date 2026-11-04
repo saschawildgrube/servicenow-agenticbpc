@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_snc_agenticbpc.GenerateAndSendStakeholderInvitation</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description>Generate and send an invitation to a process stakeholder.</description>
+        <mobile_callable>false</mobile_callable>
+        <name>GenerateAndSendStakeholderInvitation</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[function GenerateAndSendStakeholderInvitation(vStakeholder)
+{
+	var GetProperty = x_snc_devtools.GetProperty;
+	var IsValidRecord = x_snc_devtools.IsValidRecord;
+	var GetUserRecord = x_snc_devtools.GetUserRecord;
+	var GetStringValue = x_snc_devtools.GetStringValue;
+	var IsValidEmail = x_snc_devtools.IsValidEmail;
+	var SendMail = x_snc_devtools.SendMail;
+	var GetInstanceName = x_snc_devtools.GetInstanceName;
+	var HtmlEncode = x_snc_devtools.HtmlEncode;
+
+
+	// Check system property
+	if (GetProperty('glide.email.smtp.active') == false)
+	{
+		return false;
+	}
+
+	var grStakeholder = GetStakeholderRecord(vStakeholder);
+	if (IsValidRecord(grStakeholder) == false)
+	{
+		return false;
+	}
+
+	var grUser = GetUserRecord(grStakeholder.user);
+	if (IsValidRecord(grUser) == false)
+	{
+		return false;
+	}
+
+	// Check email
+	var strEmail = GetStringValue(grUser.email);
+	if (IsValidEmail(strEmail) == false)
+	{
+		return false;
+	}	
+	
+	var strMessage = GenerateStakeholderInvitation(grStakeholder);
+	if (strMessage == false)
+	{
+		return false;
+	}
+
+	var grProcess = GetBusinessProcessRecord(grStakeholder.business_process);
+	if (IsValidRecord(grProcess) == false)
+	{
+		return false;
+	}
+	var strProcessName = GetStringValue(grProcess.name);	
+
+
+	var bSuccess = SendMail(
+		{
+			recipients: strEmail,
+			subject: 'Interview regarding business process "'+strProcessName+'"',
+			from: GetInstanceName(),
+			body: HtmlEncode(strMessage),
+		});
+	
+	if (bSuccess == false)
+	{
+		return false;
+	}
+	
+	return true;
+
+}]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-03 15:44:28</sys_created_on>
+        <sys_id>b61c0bc2831cdb50ac13b410feaad3bb</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>GenerateAndSendStakeholderInvitation</sys_name>
+        <sys_package display_value="AgenticBPC" source="x_snc_agenticbpc">672e2a382b0f36109083fe395e91bf3e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AgenticBPC">672e2a382b0f36109083fe395e91bf3e</sys_scope>
+        <sys_update_name>sys_script_include_b61c0bc2831cdb50ac13b410feaad3bb</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-03 16:39:54</sys_updated_on>
+        <x_snc_devtools_sys_ui_script/>
+    </sys_script_include>
+</record_update>
