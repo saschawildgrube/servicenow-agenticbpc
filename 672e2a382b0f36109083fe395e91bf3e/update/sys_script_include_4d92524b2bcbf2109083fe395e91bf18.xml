@@ -8,9 +8,6 @@
         <description>Provides client-callable functions to support the Agentic Business Process Consultant process. &#13;
 |&#13;
 Methods:&#13;
-* StartInterview()
-|
-Methods:
 * StartInterview()</description>
         <mobile_callable>false</mobile_callable>
         <name>AgenticBPCClientAPI</name>
@@ -37,14 +34,14 @@ AgenticBPCClientAPI.prototype = Object.extendsObject(global.AbstractAjaxProcesso
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2026-02-18 14:33:42</sys_created_on>
         <sys_id>4d92524b2bcbf2109083fe395e91bf18</sys_id>
-        <sys_mod_count>15</sys_mod_count>
+        <sys_mod_count>16</sys_mod_count>
         <sys_name>AgenticBPCClientAPI</sys_name>
         <sys_package display_value="AgenticBPC WORK IN PROGRESS" source="x_snc_agenticbpc">672e2a382b0f36109083fe395e91bf3e</sys_package>
         <sys_policy/>
         <sys_scope display_value="AgenticBPC WORK IN PROGRESS">672e2a382b0f36109083fe395e91bf3e</sys_scope>
         <sys_update_name>sys_script_include_4d92524b2bcbf2109083fe395e91bf18</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-11-04 11:35:37</sys_updated_on>
+        <sys_updated_on>2026-11-04 16:49:54</sys_updated_on>
         <x_snc_devtools_sys_ui_script/>
     </sys_script_include>
 </record_update>
