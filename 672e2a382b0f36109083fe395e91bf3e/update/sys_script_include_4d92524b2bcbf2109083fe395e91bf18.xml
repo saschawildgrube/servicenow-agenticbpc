@@ -39,9 +39,9 @@ AgenticBPCClientAPI.prototype = Object.extendsObject(global.AbstractAjaxProcesso
         <sys_id>4d92524b2bcbf2109083fe395e91bf18</sys_id>
         <sys_mod_count>15</sys_mod_count>
         <sys_name>AgenticBPCClientAPI</sys_name>
-        <sys_package display_value="AgenticBPC WORK IN PROGRESS" source="x_snc_agenticbpc">672e2a382b0f36109083fe395e91bf3e</sys_package>
+        <sys_package display_value="AgenticBPC" source="x_snc_agenticbpc">672e2a382b0f36109083fe395e91bf3e</sys_package>
         <sys_policy/>
-        <sys_scope display_value="AgenticBPC WORK IN PROGRESS">672e2a382b0f36109083fe395e91bf3e</sys_scope>
+        <sys_scope display_value="AgenticBPC">672e2a382b0f36109083fe395e91bf3e</sys_scope>
         <sys_update_name>sys_script_include_4d92524b2bcbf2109083fe395e91bf18</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2026-11-04 11:35:37</sys_updated_on>
