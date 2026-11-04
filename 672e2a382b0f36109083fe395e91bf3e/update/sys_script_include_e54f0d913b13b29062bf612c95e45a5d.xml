@@ -22,6 +22,13 @@
 	{
 		return { message: 'The Business Process could not be found!' };
 	}
+
+	var grStakeholder = GetStakeholderRecord(grBP,gs.getUserID());
+	if (IsValidRecord(grStakeholder) == false)
+	{
+		return { message: 'The current user is not a Stakeholder of the given Business Process!' };
+	}
+
 	var details = ParseJson(strDetails);
 	if (IsObject(details) == false)
 	{
@@ -41,14 +48,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2026-02-25 09:24:25</sys_created_on>
         <sys_id>e54f0d913b13b29062bf612c95e45a5d</sys_id>
-        <sys_mod_count>7</sys_mod_count>
+        <sys_mod_count>11</sys_mod_count>
         <sys_name>AiToolUpdateBusinessProcess</sys_name>
         <sys_package display_value="AgenticBPC WORK IN PROGRESS" source="x_snc_agenticbpc">672e2a382b0f36109083fe395e91bf3e</sys_package>
         <sys_policy/>
         <sys_scope display_value="AgenticBPC WORK IN PROGRESS">672e2a382b0f36109083fe395e91bf3e</sys_scope>
         <sys_update_name>sys_script_include_e54f0d913b13b29062bf612c95e45a5d</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-11-03 16:56:39</sys_updated_on>
+        <sys_updated_on>2026-11-04 12:56:54</sys_updated_on>
         <x_snc_devtools_sys_ui_script/>
     </sys_script_include>
 </record_update>
