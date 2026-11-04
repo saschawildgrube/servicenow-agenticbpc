@@ -14,14 +14,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2026-03-04 13:29:22</sys_created_on>
         <sys_id>209a82273b937a1062bf612c95e45ac2</sys_id>
-        <sys_mod_count>9</sys_mod_count>
+        <sys_mod_count>15</sys_mod_count>
         <sys_name>Run Server Side Script</sys_name>
         <sys_package display_value="AgenticBPC WORK IN PROGRESS" source="x_snc_agenticbpc">672e2a382b0f36109083fe395e91bf3e</sys_package>
         <sys_policy/>
         <sys_scope display_value="AgenticBPC WORK IN PROGRESS">672e2a382b0f36109083fe395e91bf3e</sys_scope>
         <sys_update_name>sys_atf_step_209a82273b937a1062bf612c95e45ac2</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-04-15 13:31:19</sys_updated_on>
+        <sys_updated_on>2026-11-04 14:24:41</sys_updated_on>
         <table/>
         <test display_value="AgenticBPC - AiToolGetBusinessProcess">909a42273b937a1062bf612c95e45ae5</test>
         <timeout/>
@@ -36,58 +36,77 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2026-11-03 08:28:08</sys_created_on>
         <sys_id>249a82273b937a1062bf612c95e45ac5</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-11-03 08:28:08</sys_updated_on>
-        <value>(function(outputs, steps, stepResult, assertEqual)
-{
-	var test = new x_snc_devtools.TestAPI(outputs, steps, stepResult, assertEqual);
-	
-	test.SetResult(true);
-	
-	function TestCase_AiToolGetBusinessProcess(vBusinessProcess,vExpected)
-	{
-		function TestCase_AiToolGetBusinessProcess_CheckResult(vInput,vExpected,vResult)
-		{
-			if (vExpected == false)
-			{
-				if (x_snc_devtools.GetValue(vResult,'message') != 'The Business Process could not be found.')
-				{
-					return false;
-				}
-				return true;
-			}
-			if (x_snc_devtools.IsObject(vResult) == false)
-			{
-				return false;
-			}
-			return true;
-		}
-		
-		test.TestCase(
-			'Function AiToolGetBusinessProcess()',
-			AiToolGetBusinessProcess,
-			{
-				'vBusinessProcess': vBusinessProcess
-			},
-			vExpected,
-			TestCase_AiToolGetBusinessProcess_CheckResult);
-	}
-		
-	TestCase_AiToolGetBusinessProcess(null,false);
-
-	var grBP = new GlideRecord('x_snc_agenticbpc_business_process');
-	grBP.name = 'Simple Task';
-	var strBusinessProcessSysId = grBP.insert();
-	TestCase_AiToolGetBusinessProcess(strBusinessProcessSysId,true);
-
-	grBP.json = x_snc_devtools.MakeJson(x_snc_devtools.BusinessProcessGetExample());
-	grBP.update();
-	TestCase_AiToolGetBusinessProcess(strBusinessProcessSysId,true);
-
-
-	return test.GetResult();
-	
+        <sys_updated_on>2026-11-04 14:24:41</sys_updated_on>
+        <value>(function(outputs, steps, stepResult, assertEqual)&#13;
+{&#13;
+	var test = new x_snc_devtools.TestAPI(outputs, steps, stepResult, assertEqual);&#13;
+	&#13;
+	test.SetResult(true);&#13;
+	&#13;
+	function TestCase_AiToolGetBusinessProcess(vBusinessProcess,vExpected)&#13;
+	{&#13;
+		function TestCase_AiToolGetBusinessProcess_CheckResult(vInput,vExpected,vResult)&#13;
+		{&#13;
+			if (x_snc_devtools.IsObject(vResult) == false)&#13;
+			{&#13;
+				return false;&#13;
+			}&#13;
+&#13;
+			if (vExpected == false)&#13;
+			{&#13;
+				if (x_snc_devtools.GetValue(vResult,'message') == 'The Business Process could not be found!')&#13;
+				{&#13;
+					return true;&#13;
+				}&#13;
+				if (x_snc_devtools.GetValue(vResult,'message') == 'The current user is not a Stakeholder of the given Business Process!')&#13;
+				{&#13;
+					return true;&#13;
+				}&#13;
+				return false;&#13;
+			}&#13;
+			if (x_snc_devtools.GetStringValue(x_snc_devtools.GetValue(vResult,'name')) == '')&#13;
+			//if (x_snc_devtools.BusinessProcessValidate(vResult) == false)&#13;
+			{&#13;
+				return false;&#13;
+			}&#13;
+			return true;&#13;
+		}&#13;
+		&#13;
+		test.TestCase(&#13;
+			'Function AiToolGetBusinessProcess()',&#13;
+			AiToolGetBusinessProcess,&#13;
+			{&#13;
+				'vBusinessProcess': vBusinessProcess&#13;
+			},&#13;
+			vExpected,&#13;
+			TestCase_AiToolGetBusinessProcess_CheckResult);&#13;
+	}&#13;
+		&#13;
+	TestCase_AiToolGetBusinessProcess(null,false);&#13;
+&#13;
+	var grBP = new GlideRecord('x_snc_agenticbpc_business_process');&#13;
+	grBP.initialize();&#13;
+	grBP.name = 'Simple Task';&#13;
+	var strBusinessProcessSysId = grBP.insert();&#13;
+	TestCase_AiToolGetBusinessProcess(strBusinessProcessSysId,false);&#13;
+&#13;
+	var grStakeholder = new GlideRecord('x_snc_agenticbpc_stakeholder');&#13;
+	grStakeholder.initialize();&#13;
+	grStakeholder.user = gs.getUserID();&#13;
+	grStakeholder.business_process = grBP.sys_id;&#13;
+	grStakeholder.insert();&#13;
+&#13;
+	TestCase_AiToolGetBusinessProcess(strBusinessProcessSysId,true);&#13;
+&#13;
+	grBP.json = x_snc_devtools.MakeJson(x_snc_devtools.BusinessProcessGetExample());&#13;
+	grBP.update();&#13;
+	TestCase_AiToolGetBusinessProcess(strBusinessProcessSysId,true);&#13;
+&#13;
+&#13;
+	return test.GetResult();&#13;
+	&#13;
 })(outputs, steps, stepResult, assertEqual);</value>
         <variable display_value="Test script">989d9e235324220002c6435723dc3484</variable>
     </sys_variable_value>
