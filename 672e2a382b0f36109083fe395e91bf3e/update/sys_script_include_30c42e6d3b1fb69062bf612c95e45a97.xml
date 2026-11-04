@@ -22,6 +22,7 @@
 	var HtmlEncode = x_snc_devtools.HtmlEncode;
 	var ArrayGetElementById = x_snc_devtools.ArrayGetElementById;
 	var IsObject = x_snc_devtools.IsObject;
+	var HtmlEncode = x_snc_devtools.HtmlEncode;
 
 
 	var grBusinessProcess = GetBusinessProcessRecord(vBusinessProcess);
@@ -32,8 +33,8 @@
 
 	var strHtml = '';
 
-	strHtml += '<h1>' + grBusinessProcess.name + '</h1>';
-	strHtml += '<p>' + grBusinessProcess.number + '</p>';
+	strHtml += '<h1>' + HtmlEncode(grBusinessProcess.name) + '</h1>';
+	strHtml += '<p>' + HtmlEncode(grBusinessProcess.number) + '</p>';
 
 	var business_process = ParseJson(grBusinessProcess.json);
 
@@ -45,14 +46,14 @@
 	}
 
 
-	var strDescription = GetStringValue(grBusinessProcess.summary);
+	var strDescription = HtmlEncode(grBusinessProcess.summary);
 	if (strDescription == '')
 	{
-		strDescription = GetStringValue(grBusinessProcess.description);
+		strDescription = HtmlEncode(grBusinessProcess.description);
 	}
 	if (strDescription == '')
 	{
-		strDescription = GetStringValue(business_process.description);
+		strDescription = HtmlEncode(business_process.description);
 	}
 	
 	if (strDescription == '')
@@ -98,8 +99,8 @@
 			var strName = GetValue(role,'name');
 			var strDescription = GetValue(role,'description');
 
-			strHtml += '<h3>' + strName + '</h3>';
-			strHtml += '<p>' + strDescription + '</p>'; 
+			strHtml += '<h3>' + HtmlEncode(strName) + '</h3>';
+			strHtml += '<p>' + HtmlEncode(strDescription) + '</p>'; 
 		}
 	}
 
@@ -120,8 +121,8 @@
 			var strName = GetValue(state,'name');
 			var strDescription = GetValue(state,'description');
 
-			strHtml += '<h3>' + strName + '</h3>';
-			strHtml += '<p>' + strDescription + '</p>'; 
+			strHtml += '<h3>' + HtmlEncode(strName) + '</h3>';
+			strHtml += '<p>' + HtmlEncode(strDescription) + '</p>'; 
 
 			var aTransitionIds = GetArrayValue(GetValue(state,'_transitions'));
 
@@ -172,14 +173,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2026-02-26 10:21:44</sys_created_on>
         <sys_id>30c42e6d3b1fb69062bf612c95e45a97</sys_id>
-        <sys_mod_count>17</sys_mod_count>
+        <sys_mod_count>18</sys_mod_count>
         <sys_name>HtmlRenderBusinessProcess</sys_name>
         <sys_package display_value="AgenticBPC WORK IN PROGRESS" source="x_snc_agenticbpc">672e2a382b0f36109083fe395e91bf3e</sys_package>
         <sys_policy/>
         <sys_scope display_value="AgenticBPC WORK IN PROGRESS">672e2a382b0f36109083fe395e91bf3e</sys_scope>
         <sys_update_name>sys_script_include_30c42e6d3b1fb69062bf612c95e45a97</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-04-16 11:33:36</sys_updated_on>
+        <sys_updated_on>2026-11-04 13:04:46</sys_updated_on>
         <x_snc_devtools_sys_ui_script/>
     </sys_script_include>
 </record_update>
