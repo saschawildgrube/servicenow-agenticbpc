@@ -53,6 +53,7 @@
         <sys_class_name>sys_dictionary</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2026-02-13 15:33:35</sys_created_on>
+        <sys_id>a496e808c3ec5f107b53eecd2b013149</sys_id>
         <sys_name>x_snc_agenticbpc_business_process</sys_name>
         <sys_package display_value="AgenticBPC WORK IN PROGRESS" source="x_snc_agenticbpc">672e2a382b0f36109083fe395e91bf3e</sys_package>
         <sys_policy/>

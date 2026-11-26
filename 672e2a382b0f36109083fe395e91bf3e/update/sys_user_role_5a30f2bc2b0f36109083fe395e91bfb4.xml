@@ -4,6 +4,7 @@
         <can_delegate>true</can_delegate>
         <description>Users with the x_snc_agenticbpc.admin role have full access to all "Business Processes". </description>
         <elevated_privilege>false</elevated_privilege>
+        <encryption_context/>
         <federated_id>IOHXF/XM/VUqbW7DBuRD4l6tpX/tOmCVqxAgpmnkLeo=</federated_id>
         <grantable>true</grantable>
         <includes_roles/>
