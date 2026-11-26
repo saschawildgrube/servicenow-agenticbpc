@@ -4,6 +4,7 @@
         <can_delegate>true</can_delegate>
         <description>Users with the x_snc_agenticbpc.consultant role can create new Business Processes, edit existing Business Processes and start the agent.</description>
         <elevated_privilege>false</elevated_privilege>
+        <encryption_context/>
         <federated_id>MaSt/sai6S/V6efuEHItB7rpXE31XioqTaoMMXfwGoc=</federated_id>
         <grantable>true</grantable>
         <includes_roles/>

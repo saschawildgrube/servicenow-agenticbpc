@@ -4,6 +4,7 @@
         <can_delegate>true</can_delegate>
         <description>A stakeholder knows something about a business process and is interviewed by the Agentic Business Process Consultant AI agent.</description>
         <elevated_privilege>false</elevated_privilege>
+        <encryption_context/>
         <federated_id>l6JUo+ur+QF0eYlxsuFQ2Db/Y53pZ4bHAiXNNBxwphE=</federated_id>
         <grantable>true</grantable>
         <includes_roles/>

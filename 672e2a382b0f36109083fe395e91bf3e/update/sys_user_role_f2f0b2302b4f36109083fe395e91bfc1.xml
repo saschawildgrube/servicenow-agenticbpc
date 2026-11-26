@@ -4,6 +4,7 @@
         <can_delegate>true</can_delegate>
         <description>Users with the x_snc_agenticbpc.viewer role can see all Business Processes, but cannot edit them.</description>
         <elevated_privilege>false</elevated_privilege>
+        <encryption_context/>
         <federated_id>1a5uJw1iZAtxNQLnatwTaotMzbgM+hopC9vZQS6A/zs=</federated_id>
         <grantable>true</grantable>
         <includes_roles/>

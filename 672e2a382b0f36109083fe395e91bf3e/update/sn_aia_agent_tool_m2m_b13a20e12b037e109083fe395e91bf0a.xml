@@ -2,6 +2,7 @@
     <sn_aia_agent_tool_m2m action="INSERT_OR_UPDATE">
         <active>true</active>
         <agent display_value="Agentic Business Process Consultant">c7a828ed2bcf3e109083fe395e91bf64</agent>
+        <applicability_script/>
         <description>Get the details of an existing business process by its name or Sys Id.</description>
         <display_mode/>
         <display_output>false</display_output>

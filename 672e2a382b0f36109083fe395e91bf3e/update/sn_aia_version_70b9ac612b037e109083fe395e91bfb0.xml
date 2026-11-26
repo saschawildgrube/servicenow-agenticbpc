@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_aia_version">
     <sn_aia_version action="INSERT_OR_UPDATE">
+        <active>false</active>
+        <applicability_script/>
         <base_version/>
         <change_description/>
         <condition/>
@@ -62,7 +64,9 @@ Do not ask too many questions at the same time: Ask one or two questions in one 
 From time to time, summarize what you understood so far and ask the user to confirm.&#13;
 &#13;
 Do not stop the interview at any time. If the stakeholder continues to provide answers, continue asking.</instructions>
+        <label/>
         <layer>overlay</layer>
+        <order/>
         <short_description/>
         <snapshot/>
         <state>published</state>
