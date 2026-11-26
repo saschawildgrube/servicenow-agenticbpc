@@ -38,6 +38,7 @@
         <tool display_value="Validate Business Process">7166a40b2bffb6d09083fe395e91bf92</tool>
         <tool_attributes>{}</tool_attributes>
         <transformation_instructions/>
+        <wait_for_widget_interaction>false</wait_for_widget_interaction>
         <widgets/>
     </sn_aia_agent_tool_m2m>
 </record_update>

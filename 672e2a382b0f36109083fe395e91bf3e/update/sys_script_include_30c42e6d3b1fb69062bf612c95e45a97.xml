@@ -23,6 +23,11 @@
 	var ArrayGetElementById = x_snc_devtools.ArrayGetElementById;
 	var IsObject = x_snc_devtools.IsObject;
 	var HtmlEncode = x_snc_devtools.HtmlEncode;
+	var HtmlRenderMermaid = x_snc_devtools.HtmlRenderMermaid;
+	var BusinessProcessGetMermaidState = x_snc_devtools.BusinessProcessGetMermaidState;
+	var BusinessProcessGetMermaidSwimlanes = x_snc_devtools.BusinessProcessGetMermaidSwimlanes;
+	
+
 
 
 	var grBusinessProcess = GetBusinessProcessRecord(vBusinessProcess);
@@ -82,6 +87,12 @@
 		strHtml += '<h2>Input</h2>';
 		strHtml += '<p>' + HtmlEncode(strInput) + '</p>';
 	}
+
+	strHtml += '<h2>State Diagramme</h2>';
+	strHtml += HtmlRenderMermaid(BusinessProcessGetMermaidState(business_process));
+
+	strHtml += '<h2>Swimlane Diagramme</h2>';
+	strHtml += HtmlRenderMermaid(BusinessProcessGetMermaidSwimlanes(business_process));
 
 	strHtml += '<h2>Roles</h2>';
 
@@ -173,14 +184,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2026-02-26 10:21:44</sys_created_on>
         <sys_id>30c42e6d3b1fb69062bf612c95e45a97</sys_id>
-        <sys_mod_count>18</sys_mod_count>
+        <sys_mod_count>20</sys_mod_count>
         <sys_name>HtmlRenderBusinessProcess</sys_name>
         <sys_package display_value="AgenticBPC" source="x_snc_agenticbpc">672e2a382b0f36109083fe395e91bf3e</sys_package>
         <sys_policy/>
         <sys_scope display_value="AgenticBPC">672e2a382b0f36109083fe395e91bf3e</sys_scope>
         <sys_update_name>sys_script_include_30c42e6d3b1fb69062bf612c95e45a97</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-11-04 13:04:46</sys_updated_on>
+        <sys_updated_on>2026-11-22 13:53:06</sys_updated_on>
         <x_snc_devtools_sys_ui_script/>
     </sys_script_include>
 </record_update>

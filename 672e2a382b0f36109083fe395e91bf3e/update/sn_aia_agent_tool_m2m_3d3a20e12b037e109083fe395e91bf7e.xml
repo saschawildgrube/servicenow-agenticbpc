@@ -38,6 +38,7 @@
         <tool display_value="Update Business Process">f93a20e12b037e109083fe395e91bf79</tool>
         <tool_attributes>{}</tool_attributes>
         <transformation_instructions/>
+        <wait_for_widget_interaction>false</wait_for_widget_interaction>
         <widgets/>
     </sn_aia_agent_tool_m2m>
 </record_update>

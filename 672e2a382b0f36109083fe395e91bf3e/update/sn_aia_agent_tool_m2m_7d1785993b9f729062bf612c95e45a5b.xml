@@ -38,6 +38,7 @@
         <tool display_value="Get Business Process Example JSON">a91785993b9f729062bf612c95e45a53</tool>
         <tool_attributes>{}</tool_attributes>
         <transformation_instructions/>
+        <wait_for_widget_interaction>false</wait_for_widget_interaction>
         <widgets/>
     </sn_aia_agent_tool_m2m>
 </record_update>

@@ -81,10 +81,11 @@ Based on what is already known in the process and about the stakeholder, intervi
 1. What is the main desired output of the process?&#13;
 2. What are the relevant inputs into the process?&#13;
 3. What stages (or "steps") does the process have?&#13;
-4. While roles are responsible to perform activities within these stages?&#13;
-5. Who is responsible to do work in a state and to trigger the transition to the next state?&#13;
-6. What are the specific conditions to be met or deliverables to be provided for each state transition?&#13;
-7. Are there any security considerations for each state and transition?&#13;
+4. Which roles are responsible to perform activities within these stages?&#13;
+5. Which roles are responsible to do work in a state and to trigger the transition to the next state?&#13;
+6. What role is primarily responsible for a state transition? (This role should be the first in the list))&#13;
+7. What are the specific conditions to be met or deliverables to be provided for each state transition?&#13;
+8. What are the security considerations for each state and transition?&#13;
 &#13;
 Whenever the stakeholder provides new insights about the process, update the Business Process details immediately using the "Update Business Process" tool.&#13;
 Whenever the stakeholder provides new information about themselves, their role, participation or opinion about the process , update the Stakeholder details immediately using the tool "Update Stakeholder".&#13;
@@ -100,15 +101,15 @@ Do not stop the interview at any time. If the stakeholder continues to provide a
         <parent/>
         <post_processing_message/>
         <processing_message/>
-        <proficiency>- Expertly gathers, analyzes, and documents business process details by interviewing stakeholders and synthesizing information into structured, comprehensive business process documentation. The agent ensures that all relevant stages, transitions, roles, and conditions are captured, reflecting the true nature and flow of the business process.
-- Retrieves the example JSON structure for business process documentation, ensuring that all business process details are formatted according to the highest-level elements of the example. This capability guarantees that the agent's documentation is aligned with organizational standards and best practices.
-- Accesses and retrieves the details of an existing business process, enabling the agent to review, analyze, and update the process documentation as new insights are gathered from stakeholders.
-- Retrieves stakeholder details associated with a business process, allowing the agent to personalize the interview, track stakeholder participation, and update stakeholder information as new insights are provided.
-- Updates stakeholder information in real time, capturing new insights about their role, responsibilities, sentiment, and involvement in the business process. This capability ensures that stakeholder records are always up-to-date and reflective of the latest interview findings.
-- Updates the business process details in structured JSON format, incorporating new insights from stakeholder interviews. The agent ensures that all stages, transitions, roles, and conditions are documented and revised promptly, maintaining the integrity and accuracy of the business process record.
-- Validates the updated business process JSON against the example structure, ensuring that all required elements are present and correctly formatted. This capability safeguards the quality and reliability of business process documentation.
-- Conducts structured, empathetic stakeholder interviews, asking targeted questions, summarizing findings, and updating documentation in real time. The agent adapts the interview based on stakeholder responses, avoids redundant questions, and maintains a collaborative, supportive environment throughout the process.
-- Integrates multiple tools to cross-reference stakeholder information with business process details, validate updates, and ensure comprehensive, standardized documentation. The agent leverages tool dependencies to maintain data integrity and facilitate effective business process analysis and improvement.</proficiency>
+        <proficiency>- Expertly gathers, analyzes, and documents business process details by interviewing stakeholders and synthesizing structured, comprehensive business process documentation. The agent is adept at understanding process flows, roles, stages, transitions, and security considerations, ensuring that all relevant information is captured and represented in a structured format.
+- Retrieves existing business process records using identifiers such as name, number, or Sys ID, allowing the agent to access and review the process details as a prerequisite for stakeholder interviews and process documentation.
+- Obtains the example JSON structure for business process documentation, enabling the agent to align all process details with a standardized format and ensure completeness and consistency in the documentation.
+- Validates business process JSON objects against the example structure, ensuring that all required elements are present and correctly formatted before updating the business process record.
+- Updates the business process details in a structured JSON format, incorporating new insights and information from stakeholder interviews to ensure the documentation remains current and comprehensive.
+- Retrieves stakeholder details associated with a business process, enabling the agent to tailor interviews, confirm stakeholder involvement, and maintain accurate records of stakeholder roles and participation.
+- Updates stakeholder information and notes, capturing new details about their role, responsibilities, and opinions, which enriches the business process documentation and supports ongoing process analysis.
+- Conducts structured, iterative interviews with stakeholders, employing a compassionate and relationship-building approach, asking targeted questions, summarizing progress, and updating documentation in real time to ensure stakeholder engagement and comprehensive process analysis.
+- Integrates multiple tools and procedures to perform end-to-end business process analysis and documentation, including retrieving, validating, and updating process and stakeholder information, ensuring a seamless and accurate workflow.</proficiency>
         <record_type>custom</record_type>
         <required_translations/>
         <research>false</research>
@@ -121,13 +122,13 @@ Do not stop the interview at any time. If the stakeholder continues to provide a
         <sys_created_on>2026-02-13 15:02:35</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_id>c7a828ed2bcf3e109083fe395e91bf64</sys_id>
-        <sys_mod_count>43</sys_mod_count>
+        <sys_mod_count>45</sys_mod_count>
         <sys_name>Agentic Business Process Consultant</sys_name>
         <sys_package display_value="AgenticBPC" source="x_snc_agenticbpc">672e2a382b0f36109083fe395e91bf3e</sys_package>
         <sys_policy/>
         <sys_scope display_value="AgenticBPC">672e2a382b0f36109083fe395e91bf3e</sys_scope>
         <sys_update_name>sn_aia_agent_c7a828ed2bcf3e109083fe395e91bf64</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-05-05 14:31:35</sys_updated_on>
+        <sys_updated_on>2026-11-26 12:33:59</sys_updated_on>
     </sn_aia_agent>
 </record_update>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="x_snc_devtools_dependency">
+    <x_snc_devtools_dependency action="INSERT_OR_UPDATE">
+        <dependency display_value="App Engine - Prime" source="sn_aeai_prime">ab45925affff7210be72ffffffffff28</dependency>
+        <documentation_url/>
+        <name>App Engine - Prime</name>
+        <package_class>sys_store_app</package_class>
+        <reason>Running custom AI Agents requires the Prime Tier.</reason>
+        <repo_url/>
+        <source/>
+        <sys_class_name>x_snc_devtools_dependency</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-25 08:31:05</sys_created_on>
+        <sys_id>d48c7a0dc3b49b50ec129bcd2b013159</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>App Engine - Prime</sys_name>
+        <sys_package display_value="AgenticBPC" source="x_snc_agenticbpc">672e2a382b0f36109083fe395e91bf3e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AgenticBPC">672e2a382b0f36109083fe395e91bf3e</sys_scope>
+        <sys_update_name>x_snc_devtools_dependency_d48c7a0dc3b49b50ec129bcd2b013159</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-25 10:01:58</sys_updated_on>
+        <versions>29.1.8,30.1.1</versions>
+    </x_snc_devtools_dependency>
+</record_update>

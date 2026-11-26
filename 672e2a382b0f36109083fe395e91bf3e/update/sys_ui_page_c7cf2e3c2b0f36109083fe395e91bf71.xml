@@ -14,7 +14,8 @@
 		docapi.RenderHeader();
 	]</g2:no_escape>
 	
-	<p>Welcome to AgenticBusinessProcessConsultant - created and maintained by&#160;<a href="mailto:sascha@wildgrube.com">Sascha Wildgrube</a>.</p>
+	<p>Welcome to AgenticBPC - created and maintained by&#160;<a href="mailto:sascha@wildgrube.com">Sascha Wildgrube</a>.</p>
+	<p>Kudos to&#160;<a href="mailto:olivier.gregoire@servicenow.com">Olivier Gregoire</a>&#160;for his contributions to lifting the AgenticBPC to the next level.</p>
 
 	<h2>Overview</h2> 
 	<g2:no_escape>$[
@@ -28,6 +29,7 @@
 	<ul>
 		<li>Interviews business process stakeholders through the ServiceNow Otto panel using AI.</li>
 		<li>Auto-generates business process documentation.</li>  
+		<li>Auto-generates business process visualization.</li>  
 		<li>Documents business processes based on the input provided by stakeholders in a JSON object - which can then be used to auto-implement a process.</li>
 		<li>Sends invitations to stakeholders via email.</li>
 	</ul> 
@@ -39,14 +41,16 @@
 	<ul>
 		<g2:no_escape>$[
 			docapi.RenderSystemRequirements(
-				'Zurich,Australia',
+				'Australia,Brazil',
 				true,
 				AppGetDependencies());
 		]</g2:no_escape>	
+		<li>ServiceNow Otto panel is active</li>
 	</ul>
 	
 	<h2>Installation</h2>
 	<ol>
+		<li>Install Store App&#160;<a href="/now/app-manager/home/app/id/ab45925affff7210be72ffffffffff28/" target="_blank">App Engine - Prime License Tier</a>.</li>
 		<g2:no_escape>$[
 			docapi.RenderInstallationInstructionsImportFromSourceControl(
 				'DevTools',
@@ -62,13 +66,73 @@
 		<g2:no_escape>$[
 			docapi.RenderInstallationInstructionsAppInstall();
 		]</g2:no_escape>		
-		<!--<li>TODO: Add further steps required for installation...</li>-->
+		<li>Activate the ServiceNow Otto panel. Refer to the&#160;<a href="/now/nav/ui/classic/params/target/x_snc_devtools_ai_status.do" target="_blank">DevTools - Instance AI Status</a>&#160;page for guidance.</li>
 	</ol>
 
-<!--
-	<h2>Features</h2> 
-	<p>TODO: Document the features of the app here...</p>	
--->
+	<h2>Setup Interviews</h2>
+	<p>To gather insights from process stakeholders, some setup is required. For each distinct business process, follow these steps:</p>
+	<ol>
+		<li>Assign the x_snc_agenticbpc.consultant to the user who owns the requirement intake process - ideally by assigning the role and the user(s) to a group. Do not assign roles directly to users.</li>
+		<li>Identify the stakeholder users and assign the role x_snc_agenticbpc.stakeholder to these users - here again by adding the role and these identified users to a group.</li>
+		<li>Create the Business Process record, add a name and a high-level description.</li>
+		<li>For each stakeholder user, create a stakeholder record the associates the stakeholder user with the business process.</li>
+		<li>Use the button "Invite Stakeholder" on the stakeholder form to either send an email directly or display the email body text to be sent to the stakeholder (depends on whether smtp is active on the instance and whether user has a configured email address).</li>
+	</ol>
+	<p>Once all steps have been completed, users can use the link contained in the invitation to navigate to the business process form and start the interview.</p>
+
+	<h2>Implementing Business Processes</h2>
+	<p>The first step of the implementaton of a Business Process should be to create boilerplate Application Files according to an agreed standardized pattern. The AI-generated JSON object serves as the input for this boilerplate implementation.</p>
+	<p>The JSON object contains base data about the process, involved roles, the states through which the process flows and the allowed transitions between these states.</p>
+	<p>The function&#160;<a href="/sys_script_include.do?sys_id=0a1294432b3fb6d09083fe395e91bfe8" target="_blank">x_snc_devtools.BusinessProcessValidate()</a>&#160;- as the name suggests - validates the given object and returns either true or false (or if bDetailed is set to true: a detailed response about what is missing or wrong).</p>
+	<p>The function&#160;<a href="/sys_script_include.do?sys_id=33a6cd0b2b37f6d09083fe395e91bfa9" target="_blank">x_snc_devtools.AppBuilderImplementBusinessProcess()</a>&#160;implements the given business process in the given custom application. It creates the table (derived from task), state Choices, Roles, ACLs, Business Rules, UI Actions and other Application Files.</p>
+	
+	<p>Use the following code example to start the implementation:</p>
+	<pre>
+// The scope of the app to be created
+var strScope = 'x_test_process'; 
+
+// The name of the app to be created
+var strAppName = 'Test Business Process';
+
+// The number of the business process
+var strBusinessProcess = 'BP-00001';
+
+// Load the business process record
+var grBusinessProcess = x_snc_agenticbpc.GetBusinessProcessRecord(strBusinessProcess);
+
+if (x_snc_devtools.IsValidRecord(grBusinessProcess) == false)
+{
+	gs.error('Business process record could not be loaded!');
+}
+else
+{
+	var business_process = x_snc_devtools.ParseJson(grBusinessProcess.json);
+	if (x_snc_devtools.BusinessProcessValidate(business_process) == false)
+	{
+		gs.error('Business process is invalid!');
+	}
+	else
+	{
+		// Create the app
+		var strAppSysId = x_snc_devtools.AppCreate(strAppName,'scoped',strScope);
+
+		if (x_snc_devtools.IsValidSysId(strAppSysId) == false)
+		{
+			gs.error('Could not create app.');
+		}
+		else
+		{
+			// Implement the process
+			x_snc_devtools.AppBuilderImplementBusinessProcess(strScope,business_process);	
+		}
+	}
+}
+
+	</pre>
+	<p>The function creates various hook points (Business Rules, UI Actions, etc.) which all relay to a process class derived from the&#160;<a href="/sys_script_include.do?sys_id=5aa19d79c36ecb504b4f311f05013192" target="_blank">BusinessProcessAPI</a>&#160;class. This (derived) class is the core and heart of the business process implementation - one script to rule them all.</p>
+	<p>The derived class also contains the object that defines the business process itself - the implementation contains the definition it is based on. This pattern is just one out of many other possible (and fit-for-purpose) implementation patterns. Every organization is well-advised to defined their own standard if they see fit - and create their own version of x_snc_devtools.AppBuilderImplementBusinessProcess().</p> 
+
+	<p>Build Agent (or any other AI development harness) could also be used to create the boilerplate implementation using elaborate skills and guardrails. Experiments show that results will still vary and will not produce a consistent implementation pattern. Starting with the scripted boilerplate implementation provides AI Development Agents a more robust guidance on how future changes should be added and integrated into the platform.</p>  
 
 	<h2>Reference</h2>
 
@@ -118,6 +182,21 @@
 	
 	<h2 toc-ignore-children="true">Release Notes</h2>
 
+	<h3>1.1.0 - 2026-11-26</h3>
+	<ol>
+		<li>AgenticBPC is fully tested with Brazil.</li>
+		<li>Zurich is no longer actively supported.</li>
+		<li>DevTools 1.148.0 is now required.</li>
+		<li>Added dependency to "App Engine - Prime" Store App.</li>
+		<li>The process viewer now renders a state and a swimlane diagramme.</li>
+		<li>When updating the business process details the AI Agent receives detailed feedback on validity and as advised to correct and retry.</li>
+		<li>The Agent is now advised to list the primary role responsible for a state transition first - which leads to the state being associated with that primary role's swimlane.</li>
+		<li>Added chapter "Setup Interviews" to the manual.</li>
+		<li>Added chapter "Implementing Business Processes" to the manual.</li>
+		<li>Update chapter "Installation" to include the Plugin installation and ServiceNow Otto panel activation.</li>
+	</ol>
+
+
 	<h3>1.0.0 - 2026-11-04</h3>
 	<p>First baselined version</p>
 
@@ -130,13 +209,13 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2026-02-11 16:53:01</sys_created_on>
         <sys_id>c7cf2e3c2b0f36109083fe395e91bf71</sys_id>
-        <sys_mod_count>7</sys_mod_count>
+        <sys_mod_count>31</sys_mod_count>
         <sys_name>manual</sys_name>
         <sys_package display_value="AgenticBPC" source="x_snc_agenticbpc">672e2a382b0f36109083fe395e91bf3e</sys_package>
         <sys_policy/>
         <sys_scope display_value="AgenticBPC">672e2a382b0f36109083fe395e91bf3e</sys_scope>
         <sys_update_name>sys_ui_page_c7cf2e3c2b0f36109083fe395e91bf71</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-11-04 15:39:00</sys_updated_on>
+        <sys_updated_on>2026-11-26 16:08:14</sys_updated_on>
     </sys_ui_page>
 </record_update>

@@ -38,6 +38,7 @@
         <tool display_value="Get Stakeholder">1ec054032bdb36109083fe395e91bfde</tool>
         <tool_attributes>{}</tool_attributes>
         <transformation_instructions/>
+        <wait_for_widget_interaction>false</wait_for_widget_interaction>
         <widgets/>
     </sn_aia_agent_tool_m2m>
 </record_update>

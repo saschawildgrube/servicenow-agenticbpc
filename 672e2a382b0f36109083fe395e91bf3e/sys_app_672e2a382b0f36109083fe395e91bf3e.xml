@@ -17,12 +17,13 @@
         <menu/>
         <name>AgenticBPC</name>
         <package_json/>
+        <package_resolver_version/>
         <private>false</private>
         <restrict_table_access>false</restrict_table_access>
         <runtime_access_tracking>permissive</runtime_access_tracking>
         <scope>x_snc_agenticbpc</scope>
         <scoped_administration>false</scoped_administration>
-        <short_description>The Agentic Business Process Consultant AI Agent creates structured process descriptions that can serve as the foundation of a backlog or even direct automatic process implementations.</short_description>
+        <short_description>The Agentic Business Process Consultant AI Agent creates structured process descriptions based on conversations with business stakeholders. The process description can then serve as the foundation of a backlog or even direct automatic process implementations.</short_description>
         <sn_managed>false</sn_managed>
         <source>x_snc_agenticbpc</source>
         <store_correlation_id/>
@@ -33,22 +34,23 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2026-06-24 12:32:35</sys_created_on>
         <sys_id>672e2a382b0f36109083fe395e91bf3e</sys_id>
-        <sys_mod_count>9</sys_mod_count>
+        <sys_mod_count>12</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-11-04 15:38:38</sys_updated_on>
+        <sys_updated_on>2026-11-20 16:20:24</sys_updated_on>
         <template/>
         <trackable>true</trackable>
         <uninstall_blocked>false</uninstall_blocked>
         <user_role/>
         <vendor/>
         <vendor_prefix/>
-        <version>1.0.0</version>
+        <version>1.1.0</version>
         <x_snc_devtools_documentation_url>https://www.wildgrube.com/servicenow-agenticbpc</x_snc_devtools_documentation_url>
         <x_snc_devtools_maintainer>Sascha Wildgrube</x_snc_devtools_maintainer>
         <x_snc_devtools_maintainer_email>sascha@wildgrube.com</x_snc_devtools_maintainer_email>
         <x_snc_devtools_repo_url>https://github.com/saschawildgrube/servicenow-agenticbpc</x_snc_devtools_repo_url>
         <x_snc_devtools_showstopper>false</x_snc_devtools_showstopper>
         <x_snc_devtools_showstopper_details/>
+        <x_snc_devtools_type>development</x_snc_devtools_type>
         <x_snc_wildgrubelab_test/>
         <x_snc_wildgrubelab_test2/>
     </sys_app>
